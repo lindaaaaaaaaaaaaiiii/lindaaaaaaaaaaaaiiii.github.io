@@ -1,0 +1,23 @@
+title: "个人作品集"
+description: "关于内容、研究与实践的持续记录。"
+url: "https://lindaaaaaaaaaaaaiiii.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - admin/config.yml
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "本站作者"
