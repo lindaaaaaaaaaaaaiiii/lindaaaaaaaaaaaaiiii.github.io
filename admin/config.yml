@@ -1,6 +1,6 @@
 backend:
   name: turbo-github
-  turbo_site_id: "请在 Decap Turbo 创建站点后替换为 Site ID"
+  turbo_site_id: "a9670411-9d85-4686-8e8f-bcfc6b4149ae"
   branch: main
 
 site_url: https://lindaaaaaaaaaaaaiiii.github.io
