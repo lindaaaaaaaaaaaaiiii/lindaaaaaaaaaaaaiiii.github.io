@@ -9,11 +9,12 @@ permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+include:
+  - admin
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-  - admin/config.yml
 defaults:
   - scope:
       path: ""
