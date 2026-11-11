@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+:root{--ink:#171717;--muted:#777;--line:#e7e7e7;--paper:#fff;--soft:#f7f7f5;--accent:#9a4b36}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Noto Serif SC",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.site-header{min-height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(6vw,24px)}
+.wordmark{font-size:13px;letter-spacing:.16em;font-weight:700;color:var(--ink);text-decoration:none}
+.wordmark span{display:block;font-size:9px;letter-spacing:.12em;color:var(--muted);font-weight:400;margin-top:5px}
+.site-header nav{display:flex;gap:30px}
+.site-header nav a,.section-heading>a{font-size:12px;color:#555;text-decoration:none}
+.site-header nav a:hover,.section-heading>a:hover{color:var(--accent)}
+.site-main{max-width:1080px;margin:auto;padding:0 32px}
+.hero{padding:125px 0 105px;max-width:760px}
+.eyebrow{font:10px "DM Mono",monospace;letter-spacing:.13em;color:#8a8a8a;text-transform:uppercase}
+.hero h1,.page-intro h1{font-family:"Noto Serif SC",serif;font-size:clamp(44px,7vw,76px);font-weight:400;letter-spacing:-.055em;line-height:1.32;margin:30px 0}
+.intro,.page-intro>p:last-child{font-size:15px;line-height:2;color:#666;max-width:590px}
+.hero-actions{display:flex;gap:12px;margin-top:35px}
+.pill{border:1px solid #d9d9d9;border-radius:99px;padding:12px 22px;font-size:12px;text-decoration:none;color:var(--ink);transition:.2s}
+.pill:hover{border-color:var(--ink)}
+.pill-dark{background:#171717;color:white;border-color:#171717}
+.pill-dark:hover{background:#444}
+.pill span{margin-left:15px}
+.hero-note{font:9px "DM Mono";letter-spacing:.2em;color:#aaa;margin-top:60px}
+.section-block{padding:55px 0 65px;border-top:1px solid var(--line)}
+.section-heading{display:flex;justify-content:space-between;align-items:end}
+.section-heading h2,.taxonomy h2{font:400 32px "Noto Serif SC",serif;margin:12px 0}
+.section-heading>a{padding-bottom:8px}
+.section-desc{font-size:13px;color:#777;margin:12px 0 28px}
+.post-list{list-style:none;padding:0;margin:28px 0}
+.post-list li{border-bottom:1px solid var(--line);padding:16px 0}
+.post-list li>a{display:grid;grid-template-columns:110px 1fr 20px;gap:16px;text-decoration:none;color:var(--ink);align-items:center}
+.post-date{font:10px "DM Mono",monospace;color:#999}
+.post-title{font:16px "Noto Serif SC",serif}
+.post-arrow{color:#999}
+.post-excerpt{font-size:12px;line-height:1.8;color:#888;margin:8px 35px 0 126px}
+.post-list small{display:block;margin:7px 0 0 126px;color:#999;font-size:10px}
+.empty-note{font-size:13px;color:#999;padding:20px 0}
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0}
+.topic-grid a{min-height:116px;border:1px solid var(--line);padding:18px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;justify-content:space-between;transition:.2s}
+.topic-grid a:hover{background:var(--soft)}
+.topic-grid span{font:10px "DM Mono";color:#999}
+.topic-grid strong{font:15px "Noto Serif SC";font-weight:400}
+.topic-grid i{font-style:normal;align-self:flex-end;color:#999}
+.site-footer{border-top:1px solid var(--line);margin-top:50px;padding:28px max(6vw,24px);display:flex;justify-content:space-between;color:#999;font:10px "DM Mono",monospace}
+.page-intro{padding:90px 0 65px;border-bottom:1px solid var(--line)}
+.page-intro h1{font-size:54px;margin:18px 0}
+.taxonomy{padding:55px 0;border-bottom:1px solid var(--line)}
+.taxonomy>p:not(.eyebrow){color:#777;font-size:13px}
+.taxonomy h3{font:400 20px "Noto Serif SC";margin-top:35px}
+.archive-year{padding:35px 0;border-bottom:1px solid var(--line)}
+.archive-year h2{font:400 28px "DM Mono";color:#999}
+.article{max-width:760px;margin:0 auto;padding:55px 0 90px}
+.back-link{font-size:12px;color:#888;text-decoration:none}
+.article-header{padding:65px 0 35px}
+.article-header h1{font:400 clamp(32px,5vw,48px)/1.5 "Noto Serif SC";letter-spacing:-.03em;margin:20px 0}
+.article-subtitle{font:16px "Noto Serif SC";color:#777}
+.article-meta{font:10px "DM Mono";color:#999;margin-top:25px}
+.cover{width:100%;height:auto;margin:20px 0 35px;object-fit:cover}
+.prose{font:16px/2.15 "Noto Serif SC",serif;color:#333}
+.prose p{margin:0 0 1.5em}
+.prose h2{font-size:25px;font-weight:500;margin:2.2em 0 .8em}
+.prose h3{font-size:20px;font-weight:500;margin:2em 0 .7em}
+.prose blockquote{border-left:2px solid var(--accent);margin:2em 0;padding:5px 0 5px 20px;color:#777}
+.prose img{max-width:100%;height:auto}
+.prose a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+.tag-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px;color:#999;font-size:11px}
+.article-end{text-align:center;color:#aaa;font:10px "DM Mono";letter-spacing:.2em;margin-top:55px}
+.about-copy{max-width:720px;padding:50px 0 90px}
+@media(max-width:700px){.site-header{padding:18px 20px;align-items:flex-start;gap:18px;flex-direction:column}.site-header nav{gap:18px;flex-wrap:wrap}.site-main{padding:0 20px}.hero{padding:80px 0 70px}.hero h1{font-size:48px}.section-block{padding:42px 0}.topic-grid{grid-template-columns:1fr}.topic-grid a{min-height:92px}.post-list li>a{grid-template-columns:78px 1fr 16px;gap:9px}.post-title{font-size:14px}.post-list small{margin-left:87px}.post-excerpt{margin-left:87px}.page-intro{padding:65px 0 45px}.page-intro h1{font-size:43px}.article{padding:35px 0 65px}.article-header{padding:45px 0 25px}.prose{font-size:15px}.site-footer{padding:24px 20px;gap:10px;flex-direction:column}}
