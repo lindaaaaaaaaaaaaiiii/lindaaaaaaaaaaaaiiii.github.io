@@ -1,0 +1,18 @@
+{% assign items = include.posts | default: site.posts %}
+{% if items.size > 0 %}
+<ul class="post-list">
+{% for post in items limit:include.limit %}
+  <li>
+    <a href="{{ post.url | relative_url }}">
+      <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+      <span class="post-title">{{ post.title }}</span>
+      <span class="post-arrow">↗</span>
+    </a>
+    {% if post.description %}<p class="post-excerpt">{{ post.description }}</p>{% endif %}
+    <small>{% if post.subcategory %}{{ post.subcategory }}{% elsif post.category_group %}{{ post.category_group }}{% endif %}</small>
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+  <p class="empty-note">这里还没有文章。网站后台配置完成后，你可以随时登录并发布内容。</p>
+{% endif %}
