@@ -43,14 +43,13 @@ collections:
         name: "category_group"
         widget: "select"
         options:
-          - "内容分类"
+          - "创作"
           - "研究与实践"
       - label: "具体栏目"
         name: "subcategory"
         widget: "select"
         options:
-          - "文化与阅读"
-          - "个人创作"
+          - "影视阅读"
           - "社会观察"
           - "社会学研究"
           - "政策与公共议题研究"
