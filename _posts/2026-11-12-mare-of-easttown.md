@@ -2,7 +2,7 @@
 author: HE Ning
 title: 东城的逃避和伤痕
 subtitle: 关于创伤、家庭关系与真相的剧集评论
-date: 2026-11-12T00:00:00+08:00
+date: 2026-11-12T15:48:00+08:00
 category_group: 创作
 subcategory: 影视阅读
 description: 从 Mare 与 Lori 的镜像关系出发，讨论母亲身份、家庭创伤与小镇共同的沉默，追问人是否有勇气承认那些被反复回避的伤口。
