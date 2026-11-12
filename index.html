@@ -9,39 +9,6 @@ title: 首页
 {% assign social_posts = site.posts | where: "subcategory", "社会观察" %}
 {% assign research_posts = site.posts | where: "category_group", "研究与实践" %}
 
-<section class="home-hero home-hero-single" aria-label="最近更新精选">
-  <div class="hero-media">
-    <img class="hero-single-image" src="{{ home_settings.hero_background | default: '/assets/images/river-hero.svg' | relative_url }}" alt="{{ home_settings.hero_background_alt | default: '河谷与蜿蜒的河流' | escape }}">
-  </div>
-  <div class="hero-shade"></div>
-  <div class="hero-topline">
-    <span>{{ home_settings.hero_topline_left | default: 'FIELD NOTES / PERSONAL ARCHIVE' }}</span>
-    <span>{{ home_settings.hero_topline_right | default: 'READ · WATCH · THINK · CREATE' }}</span>
-  </div>
-
-  <div class="hero-feature">
-    {% if latest_post %}<a class="hero-feature-hitarea" href="{{ latest_post.url | relative_url }}" aria-label="阅读全文：{{ latest_post.title | escape }}"></a>{% endif %}
-    <p class="hero-kicker">{{ home_settings.latest_label | default: "LATEST FEATURED / 最新更新" }}</p>
-    {% if latest_post %}
-      <p class="hero-date">{{ latest_post.date | date: "%Y-%m-%d" }}</p>
-      <h1>{{ latest_post.title }}</h1>
-      {% if latest_post.description %}
-        <p class="hero-description">{{ latest_post.description }}</p>
-      {% endif %}
-      <div class="hero-meta">
-        {% if latest_post.category_group %}<span>{{ latest_post.category_group }}</span>{% endif %}
-        {% if latest_post.subcategory %}<span>{{ latest_post.subcategory }}</span>{% endif %}
-      </div>
-      <a class="hero-read-link" href="{{ latest_post.url | relative_url }}"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></a>
-    {% else %}
-      <h1>最近更新</h1>
-      <p class="hero-description">这里将展示你最新发布的文章。</p>
-      <a class="hero-read-link" href="{{ '/archive/' | relative_url }}"><span class="button-copy"><span class="button-zh">查看归档</span><span class="button-en">VIEW ARCHIVE</span></span><span class="button-arrow">↗</span></a>
-    {% endif %}
-  </div>
-  <div class="hero-index">01 / 03</div>
-</section>
-
 <section class="home-hero home-hero-single home-hero-carousel" data-hero-carousel aria-label="最近更新文章轮播">
   <div class="hero-slides">
     {% for post in site.posts limit:3 %}
