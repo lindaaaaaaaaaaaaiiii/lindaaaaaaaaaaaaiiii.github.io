@@ -142,3 +142,44 @@ a{color:inherit}
 .home-hero-single .hero-index{position:absolute;z-index:2;right:5.5%;bottom:28px;color:rgba(255,255,255,.72);font:10px "DM Mono",monospace;letter-spacing:.18em}
 @media(max-width:900px){.home-hero{min-height:680px}.home-hero-single .hero-feature{width:88%;left:6%;padding:24px 26px}.home-hero-single .hero-feature h1{font-size:40px}}
 @media(max-width:650px){.home-hero{min-height:620px}.home-hero-single .hero-topline{left:20px;right:20px;top:20px;font-size:8px}.home-hero-single .hero-topline span:last-child{display:none}.home-hero-single .hero-feature{left:18px;right:18px;bottom:54px;width:auto;padding:22px 22px 20px}.home-hero-single .hero-feature h1{font-size:28px;line-height:1.42}.home-hero-single .hero-description{font-size:13px;line-height:1.75}.home-hero-single .hero-index{right:18px;bottom:18px}}
+
+
+/* Dark reading theme: article pages only */
+body.post-page{
+  --ink:#f1f0ed;
+  --muted:#a5a5a2;
+  --line:#30302f;
+  --paper:#101010;
+  --soft:#191919;
+  --accent:#c49a86;
+  background:#101010;
+  color:#f1f0ed;
+}
+body.post-page .site-header{
+  background:#101010;
+  border-bottom-color:#30302f;
+}
+body.post-page .wordmark{color:#f1f0ed}
+body.post-page .wordmark span{color:#999}
+body.post-page .site-header nav a{color:#c2c2bf}
+body.post-page .site-header nav a:hover{color:#fff}
+body.post-page .site-main{background:#101010}
+body.post-page .article{color:#f1f0ed}
+body.post-page .back-link{color:#aaa}
+body.post-page .back-link:hover{color:#fff}
+body.post-page .article-header .eyebrow{color:#aaa}
+body.post-page .article-header h1{color:#f5f4f1}
+body.post-page .article-subtitle{color:#b8b8b4}
+body.post-page .article-meta{color:#92928e}
+body.post-page .prose{color:#d5d4d0}
+body.post-page .prose h2,
+body.post-page .prose h3{color:#f0efeb}
+body.post-page .prose blockquote{color:#bcbab5;border-left-color:#9a6b59}
+body.post-page .prose a{color:#d6a58e}
+body.post-page .tag-row{color:#aaa}
+body.post-page .article-end{color:#777}
+body.post-page .site-footer{
+  background:#101010;
+  border-top-color:#30302f;
+  color:#858581;
+}
