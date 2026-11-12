@@ -2,41 +2,125 @@
 layout: default
 title: 首页
 ---
-<section class="hero">
-  <p class="eyebrow">AN INDEPENDENT NOTEBOOK · 个人写作与研究档案</p>
-  <h1>观察现实，<br>保持思考。</h1>
-  <p class="intro">记录影视与阅读、社会观察，也整理研究和实践中的问题、方法与发现。这里保留独立判断，也尊重事实与复杂性。</p>
-  <div class="hero-actions">
-    <a class="pill pill-dark" href="{{ '/content/' | relative_url }}">浏览创作 <span>↗</span></a>
-    <a class="pill" href="{{ '/about/' | relative_url }}">关于本站</a>
+{% assign latest_post = site.posts.first %}
+{% assign recent_posts = site.posts | slice: 0, 8 %}
+{% assign film_posts = site.posts | where: "subcategory", "影视阅读" %}
+{% assign social_posts = site.posts | where: "subcategory", "社会观察" %}
+{% assign research_posts = site.posts | where: "category_group", "研究与实践" %}
+
+<section class="home-hero" aria-label="最近更新精选">
+  <div class="hero-mosaic" aria-hidden="true">
+    {% for i in (1..8) %}
+      {% assign mosaic_post = site.posts[forloop.index0] %}
+      {% if mosaic_post == nil %}{% assign mosaic_post = latest_post %}{% endif %}
+      <div class="mosaic-tile mosaic-tile-{{ forloop.index }}">
+        <img src="{% if mosaic_post and mosaic_post.cover %}{{ mosaic_post.cover | relative_url }}{% else %}{{ '/assets/images/default-cover.svg' | relative_url }}{% endif %}" alt="" {% if forloop.index > 4 %}loading="lazy"{% endif %}>
+        {% if mosaic_post %}
+          <div class="mosaic-caption">
+            <span>{{ mosaic_post.date | date: "%Y-%m-%d" }}</span>
+            <strong>{{ mosaic_post.title }}</strong>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
   </div>
-  <p class="hero-note">READ · WATCH · THINK · CREATE</p>
+  <div class="hero-shade"></div>
+  <div class="hero-topline"><span>FIELD NOTES / PERSONAL ARCHIVE</span><span>READ · WATCH · THINK · CREATE</span></div>
+  <div class="hero-feature">
+    <p class="hero-kicker">LATEST FEATURED / 最近更新</p>
+    {% if latest_post %}
+      <p class="hero-date">{{ latest_post.date | date: "%Y-%m-%d" }}</p>
+      <h1>{{ latest_post.title }}</h1>
+      {% if latest_post.description %}<p class="hero-description">{{ latest_post.description }}</p>{% endif %}
+      <div class="hero-meta">
+        <span>{{ latest_post.category_group }}</span>
+        {% if latest_post.subcategory %}<span>{{ latest_post.subcategory }}</span>{% endif %}
+      </div>
+      <a class="hero-read-link" href="{{ latest_post.url | relative_url }}">阅读全文 <span>↗</span></a>
+    {% else %}
+      <h1>观察现实，<br>保持思考。</h1>
+      <p class="hero-description">记录阅读、观看、社会观察与研究实践。</p>
+      <a class="hero-read-link" href="{{ '/content/' | relative_url }}">浏览创作 <span>↗</span></a>
+    {% endif %}
+  </div>
+  <div class="hero-index">01 / 03</div>
 </section>
 
-<section class="section-block">
-  <div class="section-heading"><div><p class="eyebrow">01 / CREATION</p><h2>创作</h2></div><a href="{{ '/content/' | relative_url }}">进入栏目 ↗</a></div>
-  <p class="section-desc">围绕影视与阅读、社会观察展开的评论、札记与个人表达。</p>
-  <div class="topic-grid">
-    <a href="{{ '/content/#film-reading' | relative_url }}"><span>01</span><strong>影视阅读</strong><i>↗</i></a>
-    <a href="{{ '/content/#social-observation' | relative_url }}"><span>02</span><strong>社会观察</strong><i>↗</i></a>
+<section class="recent-section">
+  <div class="recent-heading">
+    <div>
+      <p class="eyebrow">RECENT UPDATES / 01—03</p>
+      <h2>最近更新</h2>
+      <p>从不同的内容入口，继续阅读与观察。</p>
+    </div>
+    <a class="more-pill" href="{{ '/archive/' | relative_url }}">更多文章 <span>→</span></a>
   </div>
-  {% assign creation_posts = site.posts | where: "category_group", "创作" %}
-  {% include post-list.html posts=creation_posts limit=4 %}
+
+  <div class="recent-grid">
+    {% assign film_feature = film_posts.first %}
+    <article class="recent-card">
+      {% if film_feature %}
+        <a class="recent-card-link" href="{{ film_feature.url | relative_url }}">
+          <div class="recent-card-image"><img src="{% if film_feature.cover %}{{ film_feature.cover | relative_url }}{% else %}{{ '/assets/images/default-cover.svg' | relative_url }}{% endif %}" alt="{{ film_feature.title }}" loading="lazy"><span class="image-index">01 / FILM & READING</span></div>
+          <div class="recent-card-meta"><span>{{ film_feature.date | date: "%Y-%m-%d" }}</span><span>{{ film_feature.subcategory }}</span></div>
+          <h3>{{ film_feature.title }}</h3>
+          {% if film_feature.description %}<p class="recent-card-excerpt">{{ film_feature.description }}</p>{% endif %}
+          <span class="recent-card-more">阅读全文 ↗</span>
+        </a>
+      {% else %}
+        <a class="recent-card-link recent-card-empty" href="{{ '/content/#film-reading' | relative_url }}">
+          <div class="recent-card-image"><img src="{{ '/assets/images/default-cover.svg' | relative_url }}" alt="" loading="lazy"><span class="image-index">01 / FILM & READING</span></div>
+          <div class="recent-card-meta"><span>CREATION</span><span>影视阅读</span></div>
+          <h3>影视阅读</h3><p class="recent-card-excerpt">电影、剧集、纪录片与书籍。记录观看之后的思考，也整理阅读留下的问题。</p>
+          <span class="recent-card-more">进入栏目 ↗</span>
+        </a>
+      {% endif %}
+    </article>
+
+    {% assign social_feature = social_posts.first %}
+    <article class="recent-card">
+      {% if social_feature %}
+        <a class="recent-card-link" href="{{ social_feature.url | relative_url }}">
+          <div class="recent-card-image"><img src="{% if social_feature.cover %}{{ social_feature.cover | relative_url }}{% else %}{{ '/assets/images/default-cover.svg' | relative_url }}{% endif %}" alt="{{ social_feature.title }}" loading="lazy"><span class="image-index">02 / SOCIAL OBSERVATION</span></div>
+          <div class="recent-card-meta"><span>{{ social_feature.date | date: "%Y-%m-%d" }}</span><span>{{ social_feature.subcategory }}</span></div>
+          <h3>{{ social_feature.title }}</h3>
+          {% if social_feature.description %}<p class="recent-card-excerpt">{{ social_feature.description }}</p>{% endif %}
+          <span class="recent-card-more">阅读全文 ↗</span>
+        </a>
+      {% else %}
+        <a class="recent-card-link recent-card-empty" href="{{ '/content/#social-observation' | relative_url }}">
+          <div class="recent-card-image"><img src="{{ '/assets/images/default-cover.svg' | relative_url }}" alt="" loading="lazy"><span class="image-index">02 / SOCIAL OBSERVATION</span></div>
+          <div class="recent-card-meta"><span>CREATION</span><span>社会观察</span></div>
+          <h3>社会观察</h3><p class="recent-card-excerpt">从日常经验与公共事件出发，关注社会现实中的具体处境、变化与问题。</p>
+          <span class="recent-card-more">进入栏目 ↗</span>
+        </a>
+      {% endif %}
+    </article>
+
+    {% assign research_feature = research_posts.first %}
+    <article class="recent-card">
+      {% if research_feature %}
+        <a class="recent-card-link" href="{{ research_feature.url | relative_url }}">
+          <div class="recent-card-image"><img src="{% if research_feature.cover %}{{ research_feature.cover | relative_url }}{% else %}{{ '/assets/images/default-cover.svg' | relative_url }}{% endif %}" alt="{{ research_feature.title }}" loading="lazy"><span class="image-index">03 / RESEARCH & PRACTICE</span></div>
+          <div class="recent-card-meta"><span>{{ research_feature.date | date: "%Y-%m-%d" }}</span><span>{{ research_feature.subcategory }}</span></div>
+          <h3>{{ research_feature.title }}</h3>
+          {% if research_feature.description %}<p class="recent-card-excerpt">{{ research_feature.description }}</p>{% endif %}
+          <span class="recent-card-more">阅读全文 ↗</span>
+        </a>
+      {% else %}
+        <a class="recent-card-link recent-card-empty" href="{{ '/research/' | relative_url }}">
+          <div class="recent-card-image"><img src="{{ '/assets/images/default-cover.svg' | relative_url }}" alt="" loading="lazy"><span class="image-index">03 / RESEARCH & PRACTICE</span></div>
+          <div class="recent-card-meta"><span>RESEARCH</span><span>研究与实践</span></div>
+          <h3>研究与实践</h3><p class="recent-card-excerpt">整理社会学研究、政策与公共议题研究，以及市场研究中的问题、方法与发现。</p>
+          <span class="recent-card-more">进入栏目 ↗</span>
+        </a>
+      {% endif %}
+    </article>
+  </div>
 </section>
 
-<section class="section-block">
-  <div class="section-heading"><div><p class="eyebrow">02 / RESEARCH & PRACTICE</p><h2>研究与实践</h2></div><a href="{{ '/research/' | relative_url }}">进入栏目 ↗</a></div>
-  <p class="section-desc">围绕社会问题、公共政策与市场现象开展的研究和实践记录。</p>
-  <div class="topic-grid">
-    <a href="{{ '/research/#sociology' | relative_url }}"><span>01</span><strong>社会学研究</strong><i>↗</i></a>
-    <a href="{{ '/research/#policy' | relative_url }}"><span>02</span><strong>政策与公共议题研究</strong><i>↗</i></a>
-    <a href="{{ '/research/#market' | relative_url }}"><span>03</span><strong>市场研究</strong><i>↗</i></a>
-  </div>
-  {% assign research_posts = site.posts | where: "category_group", "研究与实践" %}
-  {% include post-list.html posts=research_posts limit=4 %}
-</section>
-
-<section class="section-block">
-  <div class="section-heading"><div><p class="eyebrow">03 / LATEST NOTES</p><h2>最近更新</h2></div><a href="{{ '/archive/' | relative_url }}">全部归档 ↗</a></div>
-  {% include post-list.html posts=site.posts limit=6 %}
+<section class="home-lower-links">
+  <a href="{{ '/content/' | relative_url }}"><span>01 / CREATION</span><strong>创作</strong><i>影视阅读 · 社会观察 ↗</i></a>
+  <a href="{{ '/research/' | relative_url }}"><span>02 / RESEARCH & PRACTICE</span><strong>研究与实践</strong><i>社会学 · 政策 · 市场研究 ↗</i></a>
+  <a href="{{ '/archive/' | relative_url }}"><span>03 / ARCHIVE</span><strong>文章归档</strong><i>按时间回看所有记录 ↗</i></a>
 </section>
