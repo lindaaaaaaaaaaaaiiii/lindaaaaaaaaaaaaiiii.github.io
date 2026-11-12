@@ -1,37 +1,37 @@
 homepage:
-  hero_background: /assets/images/river-hero.svg
-  hero_background_alt: 河谷与蜿蜒的河流
-  hero_topline_left: FIELD NOTES / PERSONAL ARCHIVE
   hero_topline_right: READ · WATCH · THINK · CREATE
-  latest_label: LATEST FEATURED / 最新更新
-  show_monthly_updates: true
-  monthly_eyebrow: RECENT UPDATES / MONTHLY JOURNAL
+  monthly_more_en: MORE ARTICLES
+  hero_topline_left: FIELD NOTES / PERSONAL ARCHIVE
   monthly_title: 按月更新
   monthly_description: 每个月，留下最近的三篇记录。向左右滑动，继续阅读。
-  monthly_more_label: 更多文章
-  monthly_more_en: MORE ARTICLES
-  show_home_links: true
-  creation_title: 创作
-  creation_english: 01 / CREATION
-  creation_description: 影视阅读 · 社会观察
-  research_title: 研究与实践
   research_english: 02 / RESEARCH & PRACTICE
+  creation_english: 01 / CREATION
+  hero_background: /assets/images/river-hero.svg
+  archive_english: 03 / ARCHIVE
+  research_title: 研究与实践
+  show_monthly_updates: true
+  monthly_eyebrow: RECENT UPDATES / MONTHLY JOURNAL
+  creation_title: 创作
   research_description: 社会学 · 政策 · 市场研究
   archive_title: 文章归档
-  archive_english: 03 / ARCHIVE
+  show_home_links: true
+  latest_label: LATEST FEATURED / 最新更新
+  monthly_more_label: 更多文章
+  creation_description: 影视阅读 · 社会观察
+  hero_background_alt: 河谷与蜿蜒的河流
   archive_description: 按时间回看所有记录
 about:
   eyebrow: ABOUT / A LITTLE ABOUT ME
-  title: "Hi, I'm Ning."
-  intro: "Curious about people, stories, and the why behind behaviors. Interested in qualitative research, with experience in academic research and consumer insights."
-  intro_zh: "你好，我是 Ning。对人、故事，以及行为背后的原因保持好奇；关注定性研究，也有学术研究与消费者洞察方面的经验。"
-  photo: ""
+  title: Hi, I'm Ning ;)
+  intro: >-
+    Curious about people, stories, and the why behind behaviors.
+
+    Interested in qualitative research, with experience in academic research and insight exploration.
+  intro_zh: >-
+    Curious about people, stories, and the why behind behaviors.
+
+    Interested in qualitative research, with experience in academic research and insight exploration.
+  photo: /assets/uploads/wechatimg322.jpg
   paragraphs:
-    - >-
-      我的日常在教学、阅读、电影与研究之间展开。它们看起来属于不同的领域，却常常把我带回相似的问题：人如何理解自己，又如何在具体的社会环境中生活？我喜欢从真实的人和经验出发，慢慢接近一个问题。
-    - >-
-      教学让我持续遇见具体的人，也让我看到知识如何进入生活、不同的成长经验如何影响一个人理解世界。在学术研究与消费者洞察相关的工作中，我逐渐对定性研究产生了更深的兴趣：倾听经验、辨认线索、理解行为背后的动机，再把零散的信息整理成有意义的发现。
-    - >-
-      我喜欢阅读，也喜欢电影。相比急着寻找一个标准答案，我更在意故事如何呈现人物、关系、记忆与时代。日常生活里的社会现象也常常吸引我停下来想一想：某种习以为常的规则如何形成，个体的选择受到什么影响，又有哪些声音容易被忽略。
-    - >-
-      我也对不同领域的研究与专业探索保持兴趣。无论是社会议题、消费者行为，还是学术研究中的复杂问题，我都享受从提问开始，搜集材料、连接线索、检验想法的过程。这个网站便是我保存这些探索的地方：有阅读与观影记录、社会观察、研究与实践，也有一些尚未完全成形的想法。
+    - 我的日常在交流、写字、阅读、电影、音乐与研究之间展开。它们看起来属于不同的领域，却常常把我带回相似的问题：人如何理解自己，又如何在具体的社会环境中生活？我喜欢从真实的人和经验出发，慢慢接近一个问题。
+    - 我也对不同领域的研究与专业探索保持兴趣。无论是社会议题、消费者行为，还是学术研究中的复杂问题，我都享受从提问开始，搜集材料、连接线索、检验想法的过程。这个网站便是我保存这些探索的地方：有阅读与观影记录、社会观察、研究与实践，也有一些尚未完全成形的想法。
