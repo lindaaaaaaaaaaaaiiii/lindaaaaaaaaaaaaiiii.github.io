@@ -3,14 +3,76 @@ layout: default
 ---
 <article class="article">
   <a class="back-link" href="{{ '/archive/' | relative_url }}" onclick="if (window.history.length > 1) { window.history.back(); return false; }"><span class="button-copy"><span class="button-zh">← 返回上一层</span><span class="button-en">BACK TO PREVIOUS PAGE</span></span></a>
-  <header class="article-header">
+  {% if page.cover %}
+  <section class="article-hero" data-article-parallax aria-label="{{ page.title | escape }}">
+    <div class="article-hero__media">
+      <img class="cover article-hero__image" data-parallax-image src="{{ page.cover | relative_url }}" alt="{{ page.title | escape }}">
+    </div>
+    <div class="article-hero__shade" aria-hidden="true"></div>
+    <header class="article-header article-hero__content">
+      <p class="eyebrow">{{ page.category_group }}{% if page.subcategory %} / {{ page.subcategory }}{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
+      <div class="article-meta">{{ page.date | date: "%Y.%m.%d" }}{% if page.author %} · {{ page.author }}{% endif %}</div>
+    </header>
+    {% if page.cover_caption %}
+    <div class="article-hero__caption"><span aria-hidden="true"></span>{{ page.cover_caption }}</div>
+    {% endif %}
+  </section>
+  {% else %}
+  <header class="article-header article-header--standalone">
     <p class="eyebrow">{{ page.category_group }}{% if page.subcategory %} / {{ page.subcategory }}{% endif %}</p>
     <h1>{{ page.title }}</h1>
     {% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
     <div class="article-meta">{{ page.date | date: "%Y.%m.%d" }}{% if page.author %} · {{ page.author }}{% endif %}</div>
   </header>
-  {% if page.cover %}<img class="cover" src="{{ page.cover | relative_url }}" alt="{{ page.title }}">{% endif %}
+  {% endif %}
   <div class="prose">{{ content }}</div>
   {% if page.tags.size > 0 %}<div class="tag-row">{% for tag in page.tags %}<span># {{ tag }}</span>{% endfor %}</div>{% endif %}
   <div class="article-end">— END —</div>
 </article>
+<script>
+/* Subtle pointer-driven parallax for article cover images. */
+(function () {
+  var hero = document.querySelector('[data-article-parallax]');
+  if (!hero) return;
+
+  var image = hero.querySelector('[data-parallax-image]');
+  var reduceMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer = window.matchMedia &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  if (!image || reduceMotion || !finePointer) return;
+
+  var frame = 0;
+
+  function move(event) {
+    var rect = hero.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+
+    var x = (event.clientX - rect.left) / rect.width - 0.5;
+    var y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    hero.classList.remove('is-pointer-out');
+    if (frame) window.cancelAnimationFrame(frame);
+    frame = window.requestAnimationFrame(function () {
+      image.style.setProperty('--parallax-x', (-x * 20).toFixed(2) + 'px');
+      image.style.setProperty('--parallax-y', (-y * 14).toFixed(2) + 'px');
+    });
+  }
+
+  function reset() {
+    hero.classList.add('is-pointer-out');
+    if (frame) window.cancelAnimationFrame(frame);
+    frame = window.requestAnimationFrame(function () {
+      image.style.setProperty('--parallax-x', '0px');
+      image.style.setProperty('--parallax-y', '0px');
+    });
+  }
+
+  hero.addEventListener('pointermove', move, { passive: true });
+  hero.addEventListener('pointerleave', reset, { passive: true });
+  hero.addEventListener('pointercancel', reset, { passive: true });
+})();
+</script>
