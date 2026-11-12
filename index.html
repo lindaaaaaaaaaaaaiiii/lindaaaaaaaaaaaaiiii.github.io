@@ -50,7 +50,7 @@ title: 首页
           <img class="hero-single-image"
                src="{% if post.cover %}{{ post.cover | relative_url }}{% else %}{{ home_settings.hero_background | default: '/assets/images/river-hero.svg' | relative_url }}{% endif %}"
                alt="{{ post.title | escape }}"
-               {% unless forloop.first %}loading="lazy"{% endunless %}>
+               loading="eager">
         </div>
         <a class="hero-feature" href="{{ post.url | relative_url }}" aria-label="阅读全文：{{ post.title | escape }}">
           <p class="hero-kicker">{{ home_settings.latest_label | default: "LATEST FEATURED / 最新更新" }}</p>
