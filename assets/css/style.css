@@ -1024,3 +1024,219 @@ body.section-page .prose a{color:#d6a58e}
   body.section-page .site-header{border-bottom-color:#3a3935}
   body.section-page .site-footer{border-top-color:#3a3935}
 }
+
+
+/* About page: warm, conversational editorial profile */
+body.section-page .about-page{
+  max-width:1120px;
+  margin:0 auto;
+  padding:28px 0 100px;
+}
+body.section-page .about-intro{
+  display:grid;
+  grid-template-columns:minmax(0,780px);
+  align-items:center;
+  gap:64px;
+  padding:72px 0 82px;
+  border-bottom:1px solid #3a3935;
+}
+body.section-page .about-intro.has-portrait{
+  grid-template-columns:minmax(0,1fr) 230px;
+}
+body.section-page .about-intro__copy .eyebrow{
+  margin:0 0 24px;
+  color:#a19c92;
+}
+body.section-page .about-intro__copy h1{
+  margin:0 0 22px;
+  color:#f1eee7;
+  font:400 clamp(44px,6vw,68px)/1.2 "Noto Serif SC",serif;
+  letter-spacing:-.045em;
+}
+body.section-page .about-intro__english{
+  max-width:700px;
+  margin:0;
+  color:#e0ddd5;
+  font:400 clamp(17px,1.8vw,21px)/1.85 "Inter","Noto Serif SC",sans-serif;
+  letter-spacing:-.01em;
+}
+body.section-page .about-intro__chinese{
+  max-width:650px;
+  margin:18px 0 0;
+  color:#aaa69e;
+  font:400 14px/2 "Noto Serif SC",serif;
+}
+body.section-page .about-intro__topics{
+  margin:30px 0 0;
+  color:#918c83;
+  font:9px/1.8 "DM Mono",monospace;
+  letter-spacing:.13em;
+}
+body.section-page .about-intro__topics span{color:#b58d72;padding:0 5px}
+body.section-page .about-portrait{
+  width:230px;
+  margin:0;
+  justify-self:end;
+}
+body.section-page .about-portrait img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(.82);
+}
+body.section-page .about-portrait figcaption{
+  margin-top:10px;
+  color:#89847b;
+  font:9px/1.6 "DM Mono",monospace;
+  letter-spacing:.14em;
+}
+body.section-page .about-story,
+body.section-page .about-interests,
+body.section-page .about-approach{
+  display:grid;
+  grid-template-columns:190px minmax(0,760px);
+  gap:54px;
+  padding:72px 0;
+  border-bottom:1px solid #3a3935;
+}
+body.section-page .about-section-marker{
+  padding-top:9px;
+  color:#938e85;
+  font:9px/1.7 "DM Mono",monospace;
+  letter-spacing:.12em;
+}
+body.section-page .about-story__body h2,
+body.section-page .about-interests__body h2{
+  margin:0 0 30px;
+  color:#f0eee8;
+  font:400 clamp(25px,3vw,34px)/1.55 "Noto Serif SC",serif;
+}
+body.section-page .about-story__body p,
+body.section-page .about-approach__body p{
+  margin:0 0 1.5em;
+  color:#d0cdc5;
+  font:400 15px/2.15 "Noto Serif SC",serif;
+}
+body.section-page .about-story__body p:last-child,
+body.section-page .about-approach__body p:last-child{margin-bottom:0}
+body.section-page .about-interest-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+body.section-page .about-interest-card{
+  position:relative;
+  min-height:190px;
+  display:flex;
+  flex-direction:column;
+  padding:22px 22px 26px;
+  border:1px solid #3a3935;
+  background:#20201e;
+  text-decoration:none;
+  transition:background .25s,border-color .25s,transform .25s;
+}
+body.section-page .about-interest-card:hover{
+  background:#272622;
+  border-color:#6a6258;
+  transform:translateY(-2px);
+}
+body.section-page .about-interest-card>span{
+  color:#9d978d;
+  font:9px/1.6 "DM Mono",monospace;
+  letter-spacing:.12em;
+}
+body.section-page .about-interest-card h3{
+  margin:25px 0 10px;
+  color:#f0eee8;
+  font:400 20px/1.5 "Noto Serif SC",serif;
+}
+body.section-page .about-interest-card p{
+  max-width:340px;
+  margin:0;
+  color:#aaa69e;
+  font:12px/1.9 "Noto Serif SC",serif;
+}
+body.section-page .about-interest-card i{
+  position:absolute;
+  right:20px;
+  bottom:17px;
+  color:#b58d72;
+  font:normal 16px/1 Inter,sans-serif;
+}
+body.section-page .about-approach__body blockquote{
+  margin:0 0 25px;
+  padding:0;
+  border:0;
+  color:#eeeae2;
+  font:400 clamp(22px,3.1vw,34px)/1.65 "Noto Serif SC",serif;
+  letter-spacing:-.015em;
+}
+body.section-page .about-connect{
+  padding:76px 0 20px;
+  text-align:center;
+}
+body.section-page .about-connect .eyebrow{
+  margin:0 0 22px;
+  color:#938e85;
+}
+body.section-page .about-connect h2{
+  margin:0 0 16px;
+  color:#f1eee7;
+  font:400 clamp(26px,4vw,42px)/1.5 "Noto Serif SC",serif;
+}
+body.section-page .about-connect>p:not(.eyebrow){
+  margin:8px 0;
+  color:#bdb8ae;
+  font:13px/1.9 "Noto Serif SC",serif;
+}
+body.section-page .about-connect .about-connect__signoff{
+  color:#e3c2a9;
+  font:italic 17px/1.8 "Inter",sans-serif;
+}
+body.section-page .about-connect__signoff span{font-style:normal;color:#c6a080}
+body.section-page .about-connect__footer{
+  margin-top:54px;
+  color:#89847b;
+  font:9px/1.8 "DM Mono",monospace;
+  letter-spacing:.2em;
+}
+@media(max-width:800px){
+  body.section-page .about-page{padding-top:10px}
+  body.section-page .about-intro,
+  body.section-page .about-intro.has-portrait{
+    grid-template-columns:minmax(0,1fr) 170px;
+    gap:28px;
+    padding:55px 0 60px;
+  }
+  body.section-page .about-portrait{width:170px}
+  body.section-page .about-story,
+  body.section-page .about-interests,
+  body.section-page .about-approach{
+    grid-template-columns:1fr;
+    gap:20px;
+    padding:55px 0;
+  }
+}
+@media(max-width:600px){
+  body.section-page .about-intro,
+  body.section-page .about-intro.has-portrait{
+    grid-template-columns:1fr;
+    gap:28px;
+    padding:42px 0 48px;
+  }
+  body.section-page .about-portrait{
+    width:min(190px,62%);
+    justify-self:start;
+  }
+  body.section-page .about-intro__copy h1{font-size:42px}
+  body.section-page .about-intro__english{font-size:16px;line-height:1.8}
+  body.section-page .about-interest-grid{grid-template-columns:1fr}
+  body.section-page .about-interest-card{min-height:160px}
+  body.section-page .about-story,
+  body.section-page .about-interests,
+  body.section-page .about-approach{padding:42px 0}
+  body.section-page .about-story__body p,
+  body.section-page .about-approach__body p{font-size:14px;line-height:2}
+}
