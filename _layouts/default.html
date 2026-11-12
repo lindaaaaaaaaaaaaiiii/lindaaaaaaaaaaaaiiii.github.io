@@ -43,7 +43,7 @@
         return response.text();
       });
     })).then(function (parts) {
-      var encodedImage = parts.join('').replace(/\\s/g, '');
+      var encodedImage = parts.join('').replace(/\s/g, '');
       if (!encodedImage.startsWith('UklGR') || encodedImage.length % 4 !== 0) {
         throw new Error('Repaired cover image data failed validation');
       }
