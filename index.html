@@ -65,8 +65,9 @@ title: 首页
           </div>
           {% if month.items.size > 1 %}
             <div class="carousel-controls" aria-label="文章横向浏览控制">
-              <button type="button" class="carousel-arrow" data-carousel-prev aria-label="向左浏览文章">←</button>
-              <button type="button" class="carousel-arrow" data-carousel-next aria-label="向右浏览文章">→</button>
+              <button type="button" class="carousel-arrow" data-carousel-prev aria-label="上一篇文章">←</button>
+              <div class="carousel-pagination" data-carousel-pagination aria-label="选择文章"></div>
+              <button type="button" class="carousel-arrow" data-carousel-next aria-label="下一篇文章">→</button>
             </div>
           {% endif %}
         </div>
