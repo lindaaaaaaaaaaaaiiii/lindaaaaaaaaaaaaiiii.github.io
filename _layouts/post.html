@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="article">
-  <a class="back-link" href="{{ '/archive/' | relative_url }}"><span class="button-copy"><span class="button-zh">← 返回文章归档</span><span class="button-en">BACK TO ARCHIVE</span></span></a>
+  <a class="back-link" href="{{ '/archive/' | relative_url }}" onclick="if (window.history.length > 1) { window.history.back(); return false; }"><span class="button-copy"><span class="button-zh">← 返回上一层</span><span class="button-en">BACK TO PREVIOUS PAGE</span></span></a>
   <header class="article-header">
     <p class="eyebrow">{{ page.category_group }}{% if page.subcategory %} / {{ page.subcategory }}{% endif %}</p>
     <h1>{{ page.title }}</h1>
