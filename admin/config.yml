@@ -68,14 +68,6 @@ collections:
         widget: "string"
         required: false
         hint: "留空时自动提取封面图片主色；如需手动覆盖，请填写 HEX 色值，例如 #26342E。"
-        pattern: ['^#?[0-9a-fA-F]{6}      - label: "标签"
-        name: "tags"
-        widget: "list"
-        required: false
-      - label: "正文"
-        name: "body"
-        widget: "markdown"
-, "请输入 6 位 HEX 色值，例如 #26342E"]
       - label: "标签"
         name: "tags"
         widget: "list"
