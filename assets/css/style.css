@@ -606,3 +606,171 @@ body.home-page .home-lower-links a:hover{background:#22211f}
 @media(max-width:650px){
   body.home-page .home-lower-links a{border-bottom-color:#383735}
 }
+
+
+/* Long-form editorial reading system inspired by Wainao Reads */
+body.post-page .article{
+  max-width:860px;
+  margin:0 auto;
+  padding:54px 0 104px;
+}
+body.post-page .article-header{
+  max-width:780px;
+  margin:0 auto;
+  padding:62px 0 30px;
+}
+body.post-page .article-header .eyebrow{
+  font:10px/1.6 "DM Mono",monospace;
+  letter-spacing:.16em;
+  color:#a39e95;
+}
+body.post-page .article-header h1{
+  font:500 clamp(34px,4.5vw,50px)/1.42 "Noto Serif SC",serif;
+  letter-spacing:-.035em;
+  color:#f2efe8;
+  margin:22px 0 18px;
+  text-wrap:pretty;
+}
+body.post-page .article-subtitle{
+  max-width:720px;
+  margin:0;
+  font:400 clamp(16px,1.8vw,19px)/1.9 "Noto Serif SC",serif;
+  color:#c1bdb5;
+}
+body.post-page .article-meta{
+  margin-top:24px;
+  font:10px/1.7 "DM Mono",monospace;
+  letter-spacing:.06em;
+  color:#918d85;
+}
+body.post-page .cover{
+  display:block;
+  width:100%;
+  max-height:620px;
+  margin:22px auto 56px;
+  object-fit:cover;
+  object-position:center;
+}
+body.post-page .prose{
+  max-width:740px;
+  margin:0 auto;
+  color:#d8d5ce;
+  font:400 17px/2.05 "Noto Serif SC",serif;
+  letter-spacing:.012em;
+  overflow-wrap:anywhere;
+}
+body.post-page .prose p{
+  margin:0 0 1.55em;
+}
+body.post-page .prose p:first-child{
+  color:#e0ddd6;
+}
+body.post-page .prose h2{
+  margin:2.55em 0 .9em;
+  color:#f1eee7;
+  font:500 26px/1.55 "Noto Serif SC",serif;
+  letter-spacing:-.02em;
+}
+body.post-page .prose h3{
+  margin:2.15em 0 .75em;
+  color:#e9e5dd;
+  font:500 21px/1.6 "Noto Serif SC",serif;
+}
+body.post-page .prose h4{
+  margin:1.9em 0 .7em;
+  color:#e5e1d9;
+  font:500 18px/1.7 "Noto Serif SC",serif;
+}
+body.post-page .prose blockquote{
+  margin:2.4em 0;
+  padding:12px 0 12px 24px;
+  border-left:2px solid #a77d69;
+  color:#c4beb4;
+  font:400 17px/2 "Noto Serif SC",serif;
+}
+body.post-page .prose blockquote p:last-child{margin-bottom:0}
+body.post-page .prose strong{color:#f0ece4;font-weight:600}
+body.post-page .prose em{color:#e1dcd2}
+body.post-page .prose a{
+  color:#d7a58d;
+  text-decoration:underline;
+  text-decoration-color:rgba(215,165,141,.48);
+  text-underline-offset:4px;
+}
+body.post-page .prose ul,
+body.post-page .prose ol{
+  margin:1.2em 0 1.8em;
+  padding-left:1.55em;
+}
+body.post-page .prose li{padding-left:.25em;margin:.45em 0}
+body.post-page .prose li::marker{color:#a77d69}
+body.post-page .prose img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:2.5em auto;
+}
+body.post-page .prose hr{
+  width:56px;
+  margin:3.2em auto;
+  border:0;
+  border-top:1px solid #625d55;
+}
+body.post-page .prose table{
+  width:100%;
+  border-collapse:collapse;
+  margin:2em 0;
+  font-size:.9em;
+}
+body.post-page .prose th,
+body.post-page .prose td{
+  padding:12px 14px;
+  border-bottom:1px solid #3a3834;
+  text-align:left;
+}
+body.post-page .prose th{color:#f0ece4;font-weight:600}
+body.post-page .prose td{color:#c9c5bd}
+body.post-page .prose code{
+  padding:.12em .35em;
+  background:#292724;
+  color:#e5c0aa;
+  border-radius:3px;
+  font-size:.88em;
+}
+body.post-page .prose pre{
+  overflow-x:auto;
+  padding:18px 20px;
+  background:#24221f;
+  border:1px solid #3a3834;
+  color:#e1ddd5;
+}
+body.post-page .prose pre code{padding:0;background:transparent;color:inherit}
+body.post-page .tag-row{
+  max-width:740px;
+  margin:54px auto 0;
+  padding-top:22px;
+  border-top:1px solid #393733;
+  color:#aaa49a;
+}
+body.post-page .article-end{
+  margin-top:64px;
+  color:#827c73;
+}
+@media(max-width:900px){
+  body.post-page .article{max-width:760px}
+  body.post-page .article-header{padding:50px 0 26px}
+  body.post-page .cover{margin-bottom:44px}
+  body.post-page .prose{font-size:16.5px;line-height:2}
+}
+@media(max-width:700px){
+  body.post-page .article{padding:30px 0 70px}
+  body.post-page .article-header{padding:42px 0 24px}
+  body.post-page .article-header h1{font-size:32px;line-height:1.5}
+  body.post-page .article-subtitle{font-size:15px;line-height:1.85}
+  body.post-page .cover{margin:16px auto 34px}
+  body.post-page .prose{font-size:16px;line-height:1.95;letter-spacing:0}
+  body.post-page .prose h2{font-size:23px;margin-top:2.2em}
+  body.post-page .prose h3{font-size:19px}
+  body.post-page .prose blockquote{font-size:15.5px;padding-left:17px}
+  body.post-page .tag-row{margin-top:40px}
+}
