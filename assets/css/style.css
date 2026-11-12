@@ -288,3 +288,104 @@ body.post-page .back-link .button-en{color:#777}
   .more-pill .button-copy{min-width:96px}
   .more-pill .button-zh{font-size:14px}
 }
+
+
+/* Monthly editorial carousel: latest three entries in each month */
+.monthly-updates{padding:76px 0 82px}
+.monthly-intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:38px}
+.monthly-intro .eyebrow{margin:0 0 12px}
+.monthly-intro h2{font:400 clamp(30px,4vw,42px)/1.25 "Noto Serif SC",serif;margin:0 0 10px;letter-spacing:-.035em}
+.monthly-intro p:not(.eyebrow){margin:0;color:#777;font-size:13px;line-height:1.8}
+.month-block{padding:30px 0 38px;border-top:1px solid var(--line)}
+.month-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}
+.month-heading-copy{display:grid;grid-template-columns:auto auto;column-gap:15px;align-items:baseline}
+.month-kicker{grid-column:1/-1;font:9px "DM Mono",monospace;letter-spacing:.15em;color:#999;margin:0 0 7px}
+.month-heading h3{font:400 clamp(25px,3vw,34px)/1.2 "DM Mono","Noto Serif SC",serif;letter-spacing:-.04em;margin:0}
+.month-count{font:9px "DM Mono",monospace;letter-spacing:.1em;color:#999;margin:0}
+.carousel-controls{display:flex;gap:8px}
+.carousel-arrow{width:42px;height:42px;border:1px solid #aaa;border-radius:999px;background:transparent;color:#333;font-size:19px;line-height:1;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.carousel-arrow:hover:not(:disabled){background:#171717;border-color:#171717;color:#fff}
+.carousel-arrow:disabled{opacity:.28;cursor:default}
+.month-carousel{width:100%;overflow:hidden}
+.month-track{display:flex;gap:20px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;padding:2px 2px 14px;scrollbar-width:none}
+.month-track::-webkit-scrollbar{display:none}
+.month-card{flex:0 0 min(520px,48vw);min-width:0;scroll-snap-align:start;background:#f7f6f3;border:1px solid #e9e6e0;transition:transform .35s ease,border-color .35s ease}
+.month-card-link{display:flex;flex-direction:column;height:100%;color:#202020;text-decoration:none}
+.month-card-image{position:relative;aspect-ratio:16/9;overflow:hidden;background:#d6d3cc}
+.month-card-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .8s cubic-bezier(.2,.65,.25,1),filter .5s ease}
+.month-card-link:hover .month-card-image img{transform:scale(1.045);filter:saturate(1.06)}
+.month-card-index{position:absolute;left:15px;bottom:13px;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.65);font:9px "DM Mono",monospace;letter-spacing:.14em}
+.month-card-content{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:21px 22px 20px}
+.month-card-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.month-card-meta span{font-size:9px;color:#777;letter-spacing:.04em}
+.month-card-meta span+span{border:1px solid #c9c6c0;border-radius:999px;padding:3px 9px;color:#5d5a55}
+.month-card h4{font:500 clamp(19px,2vw,25px)/1.5 "Noto Serif SC",serif;letter-spacing:-.025em;margin:0 0 10px;color:#202020}
+.month-card-content>p{font:12px/1.85 "Noto Serif SC",serif;color:#777;margin:0 0 20px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.month-card-more{display:inline-flex;align-items:center;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid #d8d5cf;width:100%;color:#444}
+.month-card-more .button-copy{align-items:flex-start;gap:4px}
+.month-card-more .button-zh{font-size:11px}
+.month-card-more .button-en{font-size:7px;letter-spacing:.13em;color:#999}
+.month-card-more .button-arrow{margin-left:auto;font-size:17px}
+.month-card-link:focus-visible{outline:2px solid #777;outline-offset:4px}
+@media(max-width:700px){
+  .monthly-updates{padding:54px 0 58px}
+  .monthly-intro{align-items:flex-start;gap:15px}
+  .monthly-intro>div{min-width:0}
+  .monthly-intro p:not(.eyebrow){max-width:240px}
+  .monthly-intro .more-pill{margin-top:18px}
+  .month-block{padding:24px 0 28px}
+  .month-heading{margin-bottom:16px}
+  .month-heading-copy{grid-template-columns:1fr;gap:4px}
+  .month-heading h3{font-size:26px}
+  .month-count{font-size:8px}
+  .carousel-arrow{width:36px;height:36px}
+  .month-track{gap:13px;margin-right:-20px;padding-right:20px}
+  .month-card{flex-basis:min(84vw,420px)}
+  .month-card-content{padding:17px 17px 16px}
+  .month-card h4{font-size:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  .month-track{scroll-behavior:auto}
+  .month-card-image img{transition:none}
+}
+
+/* Cinematic homepage parallax image */
+.home-hero-single .hero-media{overflow:hidden}
+.home-hero-single .hero-single-image{position:absolute;top:-8%;left:0;height:116%;width:100%;object-fit:cover;transform:translate3d(0,0,0) scale(1.12);will-change:transform}
+@media(prefers-reduced-motion:reduce){
+  .home-hero-single .hero-single-image{position:absolute;top:0;height:100%;transform:none!important;will-change:auto}
+}
+
+/* Per-article dark palette derived from the article cover image */
+body.post-page{
+  --article-bg:#101010;
+  --article-surface:#191919;
+  --article-line:#30302f;
+  --article-text:#f1f0ed;
+  --article-muted:#a5a5a2;
+  --article-accent:#c49a86;
+  --ink:var(--article-text);
+  --muted:var(--article-muted);
+  --line:var(--article-line);
+  --paper:var(--article-bg);
+  --soft:var(--article-surface);
+  --accent:var(--article-accent);
+  background:var(--article-bg);
+  color:var(--article-text);
+  transition:background-color .7s ease,color .7s ease;
+}
+body.post-page .site-header,
+body.post-page .site-main,
+body.post-page .site-footer{background:var(--article-bg);transition:background-color .7s ease}
+body.post-page .site-header{border-bottom-color:var(--article-line)}
+body.post-page .site-footer{border-top-color:var(--article-line)}
+body.post-page .prose{color:var(--article-text)}
+body.post-page .prose h2,
+body.post-page .prose h3{color:#fff}
+body.post-page .prose blockquote{border-left-color:var(--article-accent);color:var(--article-muted)}
+body.post-page .prose a{color:var(--article-accent)}
+body.post-page .back-link,
+body.post-page .article-meta,
+body.post-page .tag-row{color:var(--article-muted)}
+body.post-page .article-header .eyebrow{color:var(--article-accent)}
+body.post-page .article-subtitle{color:var(--article-muted)}
