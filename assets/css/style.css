@@ -543,3 +543,66 @@ body.post-page .reading-progress__bar{background:var(--article-accent)}
 .monthly-more-bottom .more-pill-compact .button-arrow{font-size:17px}
 .home-hero-carousel .hero-arrow:focus-visible{outline:2px solid rgba(255,255,255,.8);outline-offset:4px}
 @media(max-width:650px){.monthly-more-bottom{margin-top:20px;padding-top:14px}.monthly-more-bottom .more-pill-compact{padding:7px 13px}}
+
+
+/* Homepage charcoal theme: keep the full home interface consistently dark */
+body.home-page{
+  --ink:#eeeDE8;
+  --muted:#aaa9a3;
+  --line:#383735;
+  --paper:#191919;
+  --soft:#242321;
+  --accent:#c49a86;
+  background:#191919;
+  color:#eeeDE8;
+}
+body.home-page .site-header,
+body.home-page .site-main,
+body.home-page .site-footer{
+  background:#191919;
+}
+body.home-page .site-header{border-bottom-color:#383735}
+body.home-page .wordmark{color:#eeeDE8}
+body.home-page .wordmark span{color:#96958f}
+body.home-page .site-header nav a{color:#c4c2bc}
+body.home-page .site-header nav a:hover{color:#fff}
+body.home-page .site-footer{border-top-color:#383735;color:#898781}
+
+/* Monthly journal */
+body.home-page .monthly-updates{background:#191919;color:#eeeDE8}
+body.home-page .month-block{border-top-color:#383735}
+body.home-page .month-kicker,
+body.home-page .month-count{color:#999790}
+body.home-page .month-heading h3{color:#eeeDE8}
+body.home-page .carousel-arrow{border-color:#77756f;background:#222;color:#eeeDE8}
+body.home-page .carousel-arrow:hover:not(:disabled){background:#eeeDE8;border-color:#eeeDE8;color:#191919}
+body.home-page .carousel-dot{background:#77756f}
+body.home-page .carousel-dot.is-active{background:#eeeDE8}
+body.home-page .month-card{background:#242321;border-color:#3b3936}
+body.home-page .month-card-link{color:#eeeDE8}
+body.home-page .month-card-image{background:#302f2b}
+body.home-page .month-card-meta span{color:#aaa8a1}
+body.home-page .month-card-meta span+span{border-color:#55524c;color:#c8c5bd}
+body.home-page .month-card h4{color:#f0eee9}
+body.home-page .month-card-content>p{color:#b1afa8}
+body.home-page .month-card-more{border-top-color:#494741;color:#dedbd4}
+body.home-page .month-card-more .button-en{color:#99968e}
+body.home-page .month-card-more .button-arrow{color:#c5c1b8}
+body.home-page .month-card-link:focus-visible{outline-color:#c49a86}
+body.home-page .empty-note{color:#aaa8a1}
+
+/* Smaller archive link and lower navigation */
+body.home-page .monthly-more-bottom{border-top-color:#383735}
+body.home-page .monthly-more-bottom .more-pill-compact{border-color:#77756f;color:#eeeDE8}
+body.home-page .monthly-more-bottom .more-pill-compact .button-en{color:#99968e}
+body.home-page .monthly-more-bottom .more-pill-compact:hover{background:#eeeDE8;border-color:#eeeDE8;color:#191919}
+body.home-page .monthly-more-bottom .more-pill-compact:hover .button-en{color:#66635d}
+body.home-page .home-lower-links{border-top-color:#383735;border-bottom-color:#383735}
+body.home-page .home-lower-links a{border-right-color:#383735}
+body.home-page .home-lower-links span{color:#999790}
+body.home-page .home-lower-links strong{color:#eeeDE8}
+body.home-page .home-lower-links i{color:#aaa8a1}
+body.home-page .home-lower-links a:hover{background:#22211f}
+@media(max-width:650px){
+  body.home-page .home-lower-links a{border-bottom-color:#383735}
+}
