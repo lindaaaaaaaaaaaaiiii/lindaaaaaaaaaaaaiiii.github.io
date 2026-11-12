@@ -6,7 +6,7 @@ date: 2026-11-12T15:48:00+08:00
 category_group: 创作
 subcategory: 影视阅读
 description: 从 Mare 与 Lori 的镜像关系出发，讨论母亲身份、家庭创伤与小镇共同的沉默，追问人是否有勇气承认那些被反复回避的伤口。
-cover: /assets/uploads/mare-of-easttown-cover.svg
+cover: /assets/uploads/截屏2026-11-12-15.59.19.png
 tags:
   - 影视评论
   - 东城梦魇
