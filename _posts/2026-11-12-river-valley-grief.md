@@ -2,8 +2,8 @@
 title: 走不出的河谷：我们是否有权拥抱一场无尽的哀伤
 date: 2026-11-12T00:00:00+08:00
 author: HE Ning
-category_group: 内容分类
-subcategory: 个人创作
+category_group: 创作
+subcategory: 影视阅读
 description: 从《麦迪逊河谷》出发，重新审视西方哀伤理论与东亚丧亲经验，讨论持续性链接，以及一个人是否有权选择与哀伤共存。
 tags:
   - 影视评论
