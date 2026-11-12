@@ -62,6 +62,7 @@ collections:
         name: "cover"
         widget: "image"
         required: false
+        default: "/assets/images/default-cover.svg"
       - label: "标签"
         name: "tags"
         widget: "list"
