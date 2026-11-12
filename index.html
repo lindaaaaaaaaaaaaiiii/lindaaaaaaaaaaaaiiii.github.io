@@ -12,7 +12,6 @@ title: 首页
   <div class="hero-mosaic" aria-hidden="true">
     {% for i in (1..8) %}
       {% assign mosaic_post = site.posts[forloop.index0] %}
-      {% if mosaic_post == nil %}{% assign mosaic_post = latest_post %}{% endif %}
       <div class="mosaic-tile mosaic-tile-{{ forloop.index }}">
         <img src="{% if mosaic_post and mosaic_post.cover %}{{ mosaic_post.cover | relative_url }}{% else %}{{ '/assets/images/default-cover.svg' | relative_url }}{% endif %}" alt="" {% if forloop.index > 4 %}loading="lazy"{% endif %}>
         {% if mosaic_post %}
