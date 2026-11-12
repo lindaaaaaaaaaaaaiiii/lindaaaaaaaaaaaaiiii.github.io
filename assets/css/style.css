@@ -183,3 +183,29 @@ body.post-page .site-footer{
   border-top-color:#30302f;
   color:#858581;
 }
+
+
+/* Make each article row fully clickable, including its excerpt and category */
+.post-list li{padding:0}
+.post-list .post-list-link{
+  display:block;
+  padding:16px 12px;
+  color:var(--ink);
+  text-decoration:none;
+  transition:background .18s ease;
+}
+.post-list .post-list-link:hover{background:var(--soft)}
+.post-list .post-list-link:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.post-list-main{display:grid;grid-template-columns:110px minmax(0,1fr) 20px;gap:16px;align-items:center}
+.post-list .post-list-link .post-excerpt{margin:8px 35px 0 126px}
+.post-list .post-list-link small{display:block;margin:7px 0 0 126px;color:var(--muted);font-size:10px}
+.post-list .post-list-link:hover .post-title{color:var(--accent)}
+@media(max-width:700px){
+  .post-list-main{grid-template-columns:78px minmax(0,1fr) 16px;gap:9px}
+  .post-list .post-list-link .post-excerpt{margin-left:87px}
+  .post-list .post-list-link small{margin-left:87px}
+}
+/* The latest featured article panel is clickable across its full surface */
+.hero-feature-hitarea{position:absolute;inset:0;z-index:0;display:block}
+.hero-feature>:not(.hero-feature-hitarea){position:relative;z-index:1;pointer-events:none}
+.hero-feature .hero-read-link{position:relative;z-index:2;pointer-events:auto}
