@@ -7,13 +7,17 @@
 <ul class="post-list">
 {% for post in items limit:include.limit %}
   <li>
-    <a href="{{ post.url | relative_url }}">
-      <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-      <span class="post-title">{{ post.title }}</span>
-      <span class="post-arrow">↗</span>
+    <a class="post-list-link" href="{{ post.url | relative_url }}" aria-label="阅读全文：{{ post.title | escape }}">
+      <div class="post-list-main">
+        <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+        <span class="post-title">{{ post.title }}</span>
+        <span class="post-arrow">↗</span>
+      </div>
+      {% if post.description %}<p class="post-excerpt">{{ post.description }}</p>{% endif %}
+      {% if post.subcategory or post.category_group %}
+        <small>{% if post.subcategory %}{{ post.subcategory }}{% else %}{{ post.category_group }}{% endif %}</small>
+      {% endif %}
     </a>
-    {% if post.description %}<p class="post-excerpt">{{ post.description }}</p>{% endif %}
-    <small>{% if post.subcategory %}{{ post.subcategory }}{% elsif post.category_group %}{{ post.category_group }}{% endif %}</small>
   </li>
 {% endfor %}
 </ul>
