@@ -55,146 +55,6 @@
     });
   }
 
-  /* Homepage featured carousel: each slide uses its own article cover. */
-  var homeHero = document.querySelector('[data-hero-carousel]');
-  if (homeHero) {
-    body.classList.add('home-page');
-    var heroSlides = Array.prototype.slice.call(homeHero.querySelectorAll('[data-hero-slide]'));
-    var heroCurrent = homeHero.querySelector('[data-hero-current]');
-    var heroTotal = homeHero.querySelector('[data-hero-total]');
-    var heroPagination = homeHero.querySelector('[data-hero-pagination]');
-    var heroPrevious = homeHero.querySelector('[data-hero-prev]');
-    var heroNext = homeHero.querySelector('[data-hero-next]');
-    var heroIndex = 0;
-    var heroTimer = null;
-    var heroResumeTimer = null;
-    var heroPaused = false;
-    var heroInView = true;
-    var heroDots = [];
-
-    if (heroTotal) heroTotal.textContent = String(heroSlides.length).padStart(2, '0');
-
-    function updateHeroParallax() {
-      if (reduceMotion || !heroSlides.length) return;
-      var rect = homeHero.getBoundingClientRect();
-      var imageShift = Math.max(-55, Math.min(155, -rect.top * 0.24));
-      var textShift = Math.max(-12, Math.min(38, -rect.top * 0.055));
-      var activeSlide = heroSlides[heroIndex];
-      if (!activeSlide) return;
-      var image = activeSlide.querySelector('.hero-single-image');
-      var feature = activeSlide.querySelector('.hero-feature');
-      if (image) image.style.transform = 'translate3d(0,' + imageShift.toFixed(1) + 'px,0) scale(1.12)';
-      if (feature) feature.style.transform = 'translate3d(0,' + textShift.toFixed(1) + 'px,0)';
-    }
-
-    function setHeroSlide(nextIndex) {
-      if (!heroSlides.length) return;
-      heroSlides[heroIndex].classList.remove('is-active');
-      heroSlides[heroIndex].setAttribute('aria-hidden', 'true');
-      heroIndex = (nextIndex + heroSlides.length) % heroSlides.length;
-      heroSlides[heroIndex].classList.add('is-active');
-      heroSlides[heroIndex].setAttribute('aria-hidden', 'false');
-      if (heroCurrent) heroCurrent.textContent = String(heroIndex + 1).padStart(2, '0');
-      heroDots.forEach(function (dot, index) {
-        var active = index === heroIndex;
-        dot.classList.toggle('is-active', active);
-        dot.setAttribute('aria-current', active ? 'true' : 'false');
-      });
-      updateHeroParallax();
-    }
-
-    function stopHeroAutoplay() {
-      if (heroTimer) window.clearInterval(heroTimer);
-      heroTimer = null;
-    }
-
-    function startHeroAutoplay() {
-      if (heroTimer || heroPaused || !heroInView || document.hidden || reduceMotion || heroSlides.length < 2) return;
-      heroTimer = window.setInterval(function () {
-        setHeroSlide(heroIndex + 1);
-      }, 6500);
-    }
-
-    function pauseHeroForInteraction() {
-      heroPaused = true;
-      stopHeroAutoplay();
-      if (heroResumeTimer) window.clearTimeout(heroResumeTimer);
-      heroResumeTimer = window.setTimeout(function () {
-        heroPaused = false;
-        startHeroAutoplay();
-      }, 8000);
-    }
-
-    if (heroPagination && heroSlides.length > 1) {
-      heroSlides.forEach(function (_, index) {
-        var dot = document.createElement('button');
-        dot.type = 'button';
-        dot.className = 'hero-dot' + (index === 0 ? ' is-active' : '');
-        dot.setAttribute('aria-label', '显示第 ' + (index + 1) + ' 篇文章');
-        dot.setAttribute('aria-current', index === 0 ? 'true' : 'false');
-        dot.addEventListener('click', function () {
-          pauseHeroForInteraction();
-          setHeroSlide(index);
-        });
-        heroPagination.appendChild(dot);
-        heroDots.push(dot);
-      });
-    }
-
-    if (heroPrevious) heroPrevious.addEventListener('click', function () {
-      pauseHeroForInteraction();
-      setHeroSlide(heroIndex - 1);
-    });
-    if (heroNext) heroNext.addEventListener('click', function () {
-      pauseHeroForInteraction();
-      setHeroSlide(heroIndex + 1);
-    });
-
-    homeHero.addEventListener('mouseenter', function () {
-      heroPaused = true;
-      stopHeroAutoplay();
-    });
-    homeHero.addEventListener('mouseleave', function () {
-      heroPaused = false;
-      startHeroAutoplay();
-    });
-    homeHero.addEventListener('focusin', function () {
-      heroPaused = true;
-      stopHeroAutoplay();
-    });
-    homeHero.addEventListener('focusout', function () {
-      window.setTimeout(function () {
-        if (!homeHero.contains(document.activeElement)) {
-          heroPaused = false;
-          startHeroAutoplay();
-        }
-      }, 80);
-    });
-
-    if ('IntersectionObserver' in window) {
-      var heroVisibilityObserver = new IntersectionObserver(function (entries) {
-        heroInView = entries[0].isIntersecting;
-        if (heroInView) startHeroAutoplay();
-        else stopHeroAutoplay();
-      }, { threshold: 0.15 });
-      heroVisibilityObserver.observe(homeHero);
-    }
-
-    window.addEventListener('scroll', updateHeroParallax, { passive: true });
-    window.addEventListener('resize', updateHeroParallax);
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) stopHeroAutoplay();
-      else startHeroAutoplay();
-    });
-
-    if (heroSlides.length < 2) {
-      var heroControls = homeHero.querySelector('.hero-controls');
-      if (heroControls) heroControls.hidden = true;
-    }
-    updateHeroParallax();
-    startHeroAutoplay();
-  }
-
     /* Each month is an independent, looping carousel with autoplay and manual controls. */
     document.querySelectorAll('[data-month-carousel]').forEach(function (carousel) {
       var track = carousel.querySelector('[data-carousel-track]');
@@ -478,6 +338,160 @@
         revealObserver.observe(element);
       });
     }
+  }
+})();
+</script>
+<script>
+/* Independent, defensive homepage carousel controller. */
+(function () {
+  function initFieldNotesHero() {
+    var root = document.querySelector('[data-hero-carousel]');
+    if (!root) return;
+
+    var slides = Array.prototype.slice.call(root.querySelectorAll('[data-hero-slide]'));
+    var controls = root.querySelector('.hero-controls');
+    var oldPrevious = root.querySelector('[data-hero-prev]');
+    var oldNext = root.querySelector('[data-hero-next]');
+    var pagination = root.querySelector('[data-hero-pagination]');
+    var currentLabel = root.querySelector('[data-hero-current]');
+    var totalLabel = root.querySelector('[data-hero-total]');
+    if (slides.length < 2 || !oldPrevious || !oldNext) {
+      if (controls) controls.hidden = true;
+      return;
+    }
+
+    /* Replace the original controls so stale or duplicated listeners cannot interfere. */
+    var previous = oldPrevious.cloneNode(true);
+    var next = oldNext.cloneNode(true);
+    oldPrevious.parentNode.replaceChild(previous, oldPrevious);
+    oldNext.parentNode.replaceChild(next, oldNext);
+    if (pagination) pagination.innerHTML = '';
+
+    var activeAtStart = slides.findIndex(function (slide) {
+      return slide.classList.contains('is-active');
+    });
+    var index = activeAtStart >= 0 ? activeAtStart : 0;
+    var dots = [];
+    var timer = null;
+    var resumeTimer = null;
+    var paused = false;
+    var inView = true;
+    var reduceMotion = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (totalLabel) totalLabel.textContent = String(slides.length).padStart(2, '0');
+
+    function render(nextIndex) {
+      index = (nextIndex + slides.length) % slides.length;
+      slides.forEach(function (slide, i) {
+        var active = i === index;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      if (currentLabel) currentLabel.textContent = String(index + 1).padStart(2, '0');
+      dots.forEach(function (dot, i) {
+        var active = i === index;
+        dot.classList.toggle('is-active', active);
+        dot.setAttribute('aria-current', active ? 'true' : 'false');
+      });
+    }
+
+    function stop() {
+      if (timer) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function start() {
+      if (timer || paused || !inView || document.hidden || reduceMotion) return;
+      timer = window.setInterval(function () {
+        render(index + 1);
+      }, 6500);
+    }
+
+    function pauseAfterManualChange() {
+      paused = true;
+      stop();
+      if (resumeTimer) window.clearTimeout(resumeTimer);
+      resumeTimer = window.setTimeout(function () {
+        paused = false;
+        start();
+      }, 8000);
+    }
+
+    previous.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      pauseAfterManualChange();
+      render(index - 1);
+    });
+
+    next.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      pauseAfterManualChange();
+      render(index + 1);
+    });
+
+    if (pagination) {
+      slides.forEach(function (_, i) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'hero-dot';
+        dot.setAttribute('aria-label', '显示第 ' + (i + 1) + ' 篇文章');
+        dot.addEventListener('click', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          pauseAfterManualChange();
+          render(i);
+        });
+        pagination.appendChild(dot);
+        dots.push(dot);
+      });
+    }
+
+    root.addEventListener('mouseenter', function () {
+      paused = true;
+      stop();
+    });
+    root.addEventListener('mouseleave', function () {
+      paused = false;
+      start();
+    });
+    root.addEventListener('focusin', function () {
+      paused = true;
+      stop();
+    });
+    root.addEventListener('focusout', function () {
+      window.setTimeout(function () {
+        if (!root.contains(document.activeElement)) {
+          paused = false;
+          start();
+        }
+      }, 80);
+    });
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        inView = entries[0].isIntersecting;
+        if (inView) start();
+        else stop();
+      }, { threshold: 0.15 });
+      observer.observe(root);
+    }
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stop();
+      else start();
+    });
+
+    render(index);
+    start();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFieldNotesHero, { once: true });
+  } else {
+    initFieldNotesHero();
   }
 })();
 </script>
