@@ -42,6 +42,43 @@ title: 首页
   <div class="hero-index">01 / 03</div>
 </section>
 
+<section class="home-hero home-hero-single home-hero-carousel" data-hero-carousel aria-label="最近更新文章轮播">
+  <div class="hero-slides">
+    {% for post in site.posts limit:3 %}
+      <article class="hero-slide{% if forloop.first %} is-active{% endif %}" data-hero-slide aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
+        <div class="hero-media">
+          <img class="hero-single-image"
+               src="{% if post.cover %}{{ post.cover | relative_url }}{% else %}{{ home_settings.hero_background | default: '/assets/images/river-hero.svg' | relative_url }}{% endif %}"
+               alt="{{ post.title | escape }}"
+               {% unless forloop.first %}loading="lazy"{% endunless %}>
+        </div>
+        <a class="hero-feature" href="{{ post.url | relative_url }}" aria-label="阅读全文：{{ post.title | escape }}">
+          <p class="hero-kicker">{{ home_settings.latest_label | default: "LATEST FEATURED / 最新更新" }}</p>
+          <p class="hero-date">{{ post.date | date: "%Y-%m-%d" }}</p>
+          <h1>{{ post.title }}</h1>
+          {% if post.description %}<p class="hero-description">{{ post.description }}</p>{% endif %}
+          <div class="hero-meta">
+            {% if post.category_group %}<span>{{ post.category_group }}</span>{% endif %}
+            {% if post.subcategory %}<span>{{ post.subcategory }}</span>{% endif %}
+          </div>
+          <span class="hero-read-link"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></span>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+  <div class="hero-shade"></div>
+  <div class="hero-topline">
+    <span>{{ home_settings.hero_topline_left | default: 'FIELD NOTES / PERSONAL ARCHIVE' }}</span>
+    <span>{{ home_settings.hero_topline_right | default: 'READ · WATCH · THINK · CREATE' }}</span>
+  </div>
+  <div class="hero-controls" aria-label="首页文章切换">
+    <button type="button" class="hero-arrow" data-hero-prev aria-label="上一篇文章">←</button>
+    <div class="hero-pagination" data-hero-pagination aria-label="选择首页文章"></div>
+    <button type="button" class="hero-arrow" data-hero-next aria-label="下一篇文章">→</button>
+  </div>
+  <div class="hero-index" aria-live="polite"><span data-hero-current>01</span> / <span data-hero-total>{{ site.posts.size | at_most: 3 | prepend: '0' }}</span></div>
+</section>
+
 {% if home_settings.show_monthly_updates != false %}
 <section class="monthly-updates" aria-label="按月份浏览最新文章">
   <div class="monthly-intro">
