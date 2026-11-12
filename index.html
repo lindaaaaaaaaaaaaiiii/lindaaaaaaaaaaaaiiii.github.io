@@ -3,6 +3,7 @@ layout: default
 title: 首页
 ---
 
+{% assign home_settings = site.data.site_settings.homepage %}
 {% assign latest_post = site.posts.first %}
 {% assign film_posts = site.posts | where: "subcategory", "影视阅读" %}
 {% assign social_posts = site.posts | where: "subcategory", "社会观察" %}
@@ -10,17 +11,17 @@ title: 首页
 
 <section class="home-hero home-hero-single" aria-label="最近更新精选">
   <div class="hero-media">
-    <img class="hero-single-image" src="{{ '/assets/images/river-hero.svg' | relative_url }}" alt="河谷与蜿蜒的河流">
+    <img class="hero-single-image" src="{{ home_settings.hero_background | default: '/assets/images/river-hero.svg' | relative_url }}" alt="{{ home_settings.hero_background_alt | default: '河谷与蜿蜒的河流' | escape }}">
   </div>
   <div class="hero-shade"></div>
   <div class="hero-topline">
-    <span>FIELD NOTES / PERSONAL ARCHIVE</span>
-    <span>READ · WATCH · THINK · CREATE</span>
+    <span>{{ home_settings.hero_topline_left | default: 'FIELD NOTES / PERSONAL ARCHIVE' }}</span>
+    <span>{{ home_settings.hero_topline_right | default: 'READ · WATCH · THINK · CREATE' }}</span>
   </div>
 
   <div class="hero-feature">
     {% if latest_post %}<a class="hero-feature-hitarea" href="{{ latest_post.url | relative_url }}" aria-label="阅读全文：{{ latest_post.title | escape }}"></a>{% endif %}
-    <p class="hero-kicker">LATEST FEATURED / 最新更新</p>
+    <p class="hero-kicker">{{ home_settings.latest_label | default: "LATEST FEATURED / 最新更新" }}</p>
     {% if latest_post %}
       <p class="hero-date">{{ latest_post.date | date: "%Y-%m-%d" }}</p>
       <h1>{{ latest_post.title }}</h1>
@@ -41,14 +42,15 @@ title: 首页
   <div class="hero-index">01 / 03</div>
 </section>
 
+{% if home_settings.show_monthly_updates != false %}
 <section class="monthly-updates" aria-label="按月份浏览最新文章">
   <div class="monthly-intro">
     <div>
-      <p class="eyebrow">RECENT UPDATES / MONTHLY JOURNAL</p>
-      <h2>按月更新</h2>
-      <p>每个月，留下最近的三篇记录。向左右滑动，继续阅读。</p>
+      <p class="eyebrow">{{ home_settings.monthly_eyebrow | default: "RECENT UPDATES / MONTHLY JOURNAL" }}</p>
+      <h2>{{ home_settings.monthly_title | default: "按月更新" }}</h2>
+      <p>{{ home_settings.monthly_description | default: "每个月，留下最近的三篇记录。向左右滑动，继续阅读。" }}</p>
     </div>
-    <a class="more-pill" href="{{ '/archive/' | relative_url }}"><span class="button-copy"><span class="button-zh">更多文章</span><span class="button-en">MORE ARTICLES</span></span><span class="button-arrow">→</span></a>
+    <a class="more-pill" href="{{ '/archive/' | relative_url }}"><span class="button-copy"><span class="button-zh">{{ home_settings.monthly_more_label | default: "更多文章" }}</span><span class="button-en">{{ home_settings.monthly_more_en | default: "MORE ARTICLES" }}</span></span><span class="button-arrow">→</span></a>
   </div>
 
   {% assign monthly_groups = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
@@ -101,21 +103,24 @@ title: 首页
     <p class="empty-note">发布第一篇文章后，这里会自动出现每月更新。</p>
   {% endif %}
 </section>
+{% endif %}
 
+{% if home_settings.show_home_links != false %}
 <section class="home-lower-links">
   <a href="{{ '/content/' | relative_url }}">
-    <span>01 / CREATION</span>
-    <strong>创作</strong>
-    <i>影视阅读 · 社会观察 ↗</i>
+    <span>{{ home_settings.creation_english | default: "01 / CREATION" }}</span>
+    <strong>{{ home_settings.creation_title | default: "创作" }}</strong>
+    <i>{{ home_settings.creation_description | default: "影视阅读 · 社会观察" }} ↗</i>
   </a>
   <a href="{{ '/research/' | relative_url }}">
-    <span>02 / RESEARCH &amp; PRACTICE</span>
-    <strong>研究与实践</strong>
-    <i>社会学 · 政策 · 市场研究 ↗</i>
+    <span>{{ home_settings.research_english | default: "02 / RESEARCH &amp; PRACTICE" }}</span>
+    <strong>{{ home_settings.research_title | default: "研究与实践" }}</strong>
+    <i>{{ home_settings.research_description | default: "社会学 · 政策 · 市场研究" }} ↗</i>
   </a>
   <a href="{{ '/archive/' | relative_url }}">
-    <span>03 / ARCHIVE</span>
-    <strong>文章归档</strong>
-    <i>按时间回看所有记录 ↗</i>
+    <span>{{ home_settings.archive_english | default: "03 / ARCHIVE" }}</span>
+    <strong>{{ home_settings.archive_title | default: "文章归档" }}</strong>
+    <i>{{ home_settings.archive_description | default: "按时间回看所有记录" }} ↗</i>
   </a>
 </section>
+{% endif %}
