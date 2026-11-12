@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<defs>
+  <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d9d9d4"/><stop offset=".48" stop-color="#aaaead"/><stop offset="1" stop-color="#5e6465"/></linearGradient>
+  <pattern id="dots" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.8" fill="#202526" opacity=".38"/></pattern>
+  <pattern id="lines" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M0 26L26 0" stroke="#f2eee5" stroke-width="1" opacity=".16"/></pattern>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .12"/></feComponentTransfer></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#paper)"/>
+<path d="M0 690L420 250 770 590 1120 130 1600 560V1000H0Z" fill="#777e7b" opacity=".58"/>
+<path d="M0 760L390 400 720 700 1120 300 1600 690V1000H0Z" fill="#3f494a" opacity=".54"/>
+<circle cx="1190" cy="310" r="210" fill="#d4b5a7" opacity=".72"/>
+<path d="M0 0H680L410 1000H0Z" fill="#eee8dc" opacity=".3"/>
+<path d="M900 0H1600V1000H1280Z" fill="#1e292b" opacity=".2"/>
+<rect width="1600" height="1000" fill="url(#dots)"/>
+<rect width="1600" height="1000" fill="url(#lines)"/>
+<g fill="none" stroke="#f6f1e8" stroke-width="3" opacity=".45">
+  <path d="M100 170H560V590H100Z"/><path d="M1060 480H1490V830H1060Z"/>
+  <path d="M180 760C400 580 580 890 800 690S1220 500 1450 650"/>
+</g>
+<g fill="#161c1d" opacity=".78" font-family="Arial,sans-serif">
+  <text x="100" y="120" font-size="26" letter-spacing="8">FIELD NOTES / PERSONAL ARCHIVE</text>
+  <text x="104" y="545" font-size="18" letter-spacing="5">READ · WATCH · THINK</text>
+  <text x="1080" y="890" font-size="18" letter-spacing="5">OBSERVE / RECORD / REFLECT</text>
+</g>
+<rect width="1600" height="1000" filter="url(#grain)" opacity=".45"/>
+</svg>
