@@ -4,7 +4,7 @@ date: 2026-11-12T00:00:00+08:00
 author: HE Ning
 category_group: 创作
 subcategory: 影视阅读
-cover: /assets/images/default-cover.svg
+cover: /assets/images/river-hero.svg
 description: 从《麦迪逊河谷》出发，重新审视西方哀伤理论与东亚丧亲经验，讨论持续性链接，以及一个人是否有权选择与哀伤共存。
 tags:
   - 影视评论
