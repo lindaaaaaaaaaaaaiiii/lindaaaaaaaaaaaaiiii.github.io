@@ -1,0 +1,30 @@
+homepage:
+  hero_background: /assets/images/river-hero.svg
+  hero_background_alt: 河谷与蜿蜒的河流
+  hero_topline_left: FIELD NOTES / PERSONAL ARCHIVE
+  hero_topline_right: READ · WATCH · THINK · CREATE
+  latest_label: LATEST FEATURED / 最新更新
+  show_monthly_updates: true
+  monthly_eyebrow: RECENT UPDATES / MONTHLY JOURNAL
+  monthly_title: 按月更新
+  monthly_description: 每个月，留下最近的三篇记录。向左右滑动，继续阅读。
+  monthly_more_label: 更多文章
+  monthly_more_en: MORE ARTICLES
+  show_home_links: true
+  creation_title: 创作
+  creation_english: 01 / CREATION
+  creation_description: 影视阅读 · 社会观察
+  research_title: 研究与实践
+  research_english: 02 / RESEARCH & PRACTICE
+  research_description: 社会学 · 政策 · 市场研究
+  archive_title: 文章归档
+  archive_english: 03 / ARCHIVE
+  archive_description: 按时间回看所有记录
+about:
+  eyebrow: ABOUT / 04
+  title: 我是谁
+  intro: 一个持续更新的个人写作与研究档案。
+  paragraphs:
+    - 这里记录我感兴趣的问题、阅读和观看的作品、个人创作，以及对社会现实的观察。
+    - 我也会整理研究与实践过程中的材料、方法和阶段性思考。希望这些文字既保留问题意识，也尽可能尊重事实与证据。
+    - 本站持续建设中，欢迎从内容分类与文章归档开始阅读。
