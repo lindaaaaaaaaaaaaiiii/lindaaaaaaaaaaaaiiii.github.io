@@ -41,107 +41,64 @@ title: 首页
   <div class="hero-index">01 / 03</div>
 </section>
 
-<section class="recent-section">
-  <div class="recent-heading">
+<section class="monthly-updates" aria-label="按月份浏览最新文章">
+  <div class="monthly-intro">
     <div>
-      <p class="eyebrow">RECENT UPDATES / 01—03</p>
-      <h2>最近更新</h2>
-      <p>从不同的内容入口，继续阅读与观察。</p>
+      <p class="eyebrow">RECENT UPDATES / MONTHLY JOURNAL</p>
+      <h2>按月更新</h2>
+      <p>每个月，留下最近的三篇记录。向左右滑动，继续阅读。</p>
     </div>
     <a class="more-pill" href="{{ '/archive/' | relative_url }}"><span class="button-copy"><span class="button-zh">更多文章</span><span class="button-en">MORE ARTICLES</span></span><span class="button-arrow">→</span></a>
   </div>
 
-  <div class="recent-grid">
-    {% assign film_feature = film_posts.first %}
-    <article class="recent-card">
-      {% if film_feature %}
-        <a class="recent-card-link" href="{{ film_feature.url | relative_url }}">
-          <div class="recent-card-image">
-            <img src="{% if film_feature.cover %}{{ film_feature.cover | relative_url }}{% else %}{{ '/assets/images/default-cover.svg' | relative_url }}{% endif %}" alt="{{ film_feature.title }}" loading="lazy">
-            <span class="image-index">01 / FILM &amp; READING</span>
+  {% assign monthly_groups = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
+  {% if monthly_groups.size > 0 %}
+    {% for month in monthly_groups %}
+      <section class="month-block" aria-label="{{ month.name }} 的文章">
+        <div class="month-heading">
+          <div class="month-heading-copy">
+            <p class="month-kicker">{{ forloop.index | prepend: '0' }} / MONTHLY NOTES</p>
+            <h3>{{ month.name | replace: '-', ' / ' }}</h3>
+            <p class="month-count">
+              {% if month.items.size > 3 %}LATEST 03 / {{ month.items.size }} ENTRIES{% else %}{{ month.items.size | prepend: '0' }} ENTRIES{% endif %}
+            </p>
           </div>
-          <div class="recent-card-meta">
-            <span>{{ film_feature.date | date: "%Y-%m-%d" }}</span>
-            <span>{{ film_feature.subcategory }}</span>
-          </div>
-          <h3>{{ film_feature.title }}</h3>
-          {% if film_feature.description %}<p class="recent-card-excerpt">{{ film_feature.description }}</p>{% endif %}
-          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></span>
-        </a>
-      {% else %}
-        <a class="recent-card-link recent-card-empty" href="{{ '/content/' | relative_url }}">
-          <div class="recent-card-image">
-            <img src="{{ '/assets/images/default-cover.svg' | relative_url }}" alt="" loading="lazy">
-            <span class="image-index">01 / FILM &amp; READING</span>
-          </div>
-          <div class="recent-card-meta"><span>CREATION</span><span>影视阅读</span></div>
-          <h3>影视阅读</h3>
-          <p class="recent-card-excerpt">电影、剧集、纪录片与书籍。记录观看之后的思考，也整理阅读留下的问题。</p>
-          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">进入栏目</span><span class="button-en">EXPLORE SECTION</span></span><span class="button-arrow">↗</span></span>
-        </a>
-      {% endif %}
-    </article>
+          {% if month.items.size > 1 %}
+            <div class="carousel-controls" aria-label="文章横向浏览控制">
+              <button type="button" class="carousel-arrow" data-carousel-prev aria-label="向左浏览文章">←</button>
+              <button type="button" class="carousel-arrow" data-carousel-next aria-label="向右浏览文章">→</button>
+            </div>
+          {% endif %}
+        </div>
 
-    {% assign social_feature = social_posts.first %}
-    <article class="recent-card">
-      {% if social_feature %}
-        <a class="recent-card-link" href="{{ social_feature.url | relative_url }}">
-          <div class="recent-card-image">
-            <img src="{% if social_feature.cover %}{{ social_feature.cover | relative_url }}{% else %}{{ '/assets/images/default-cover.svg' | relative_url }}{% endif %}" alt="{{ social_feature.title }}" loading="lazy">
-            <span class="image-index">02 / SOCIAL OBSERVATION</span>
+        <div class="month-carousel" data-month-carousel>
+          <div class="month-track" data-carousel-track>
+            {% for post in month.items limit:3 %}
+              <article class="month-card">
+                <a class="month-card-link" href="{{ post.url | relative_url }}" aria-label="阅读：{{ post.title | escape }}">
+                  <div class="month-card-image">
+                    <img src="{% if post.cover %}{{ post.cover | relative_url }}{% else %}{{ '/assets/images/default-cover.svg' | relative_url }}{% endif %}" alt="{{ post.title | escape }}" loading="lazy">
+                    <span class="month-card-index">{{ forloop.index | prepend: '0' }} / {{ post.date | date: "%m.%d" }}</span>
+                  </div>
+                  <div class="month-card-content">
+                    <div class="month-card-meta">
+                      {% if post.category_group %}<span>{{ post.category_group }}</span>{% endif %}
+                      {% if post.subcategory %}<span>{{ post.subcategory }}</span>{% endif %}
+                    </div>
+                    <h4>{{ post.title }}</h4>
+                    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+                    <span class="month-card-more"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></span>
+                  </div>
+                </a>
+              </article>
+            {% endfor %}
           </div>
-          <div class="recent-card-meta">
-            <span>{{ social_feature.date | date: "%Y-%m-%d" }}</span>
-            <span>{{ social_feature.subcategory }}</span>
-          </div>
-          <h3>{{ social_feature.title }}</h3>
-          {% if social_feature.description %}<p class="recent-card-excerpt">{{ social_feature.description }}</p>{% endif %}
-          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></span>
-        </a>
-      {% else %}
-        <a class="recent-card-link recent-card-empty" href="{{ '/content/' | relative_url }}">
-          <div class="recent-card-image">
-            <img src="{{ '/assets/images/default-cover.svg' | relative_url }}" alt="" loading="lazy">
-            <span class="image-index">02 / SOCIAL OBSERVATION</span>
-          </div>
-          <div class="recent-card-meta"><span>CREATION</span><span>社会观察</span></div>
-          <h3>社会观察</h3>
-          <p class="recent-card-excerpt">从日常经验与公共事件出发，关注社会现实中的具体处境、变化与问题。</p>
-          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">进入栏目</span><span class="button-en">EXPLORE SECTION</span></span><span class="button-arrow">↗</span></span>
-        </a>
-      {% endif %}
-    </article>
-
-    {% assign research_feature = research_posts.first %}
-    <article class="recent-card">
-      {% if research_feature %}
-        <a class="recent-card-link" href="{{ research_feature.url | relative_url }}">
-          <div class="recent-card-image">
-            <img src="{% if research_feature.cover %}{{ research_feature.cover | relative_url }}{% else %}{{ '/assets/images/default-cover.svg' | relative_url }}{% endif %}" alt="{{ research_feature.title }}" loading="lazy">
-            <span class="image-index">03 / RESEARCH &amp; PRACTICE</span>
-          </div>
-          <div class="recent-card-meta">
-            <span>{{ research_feature.date | date: "%Y-%m-%d" }}</span>
-            {% if research_feature.subcategory %}<span>{{ research_feature.subcategory }}</span>{% endif %}
-          </div>
-          <h3>{{ research_feature.title }}</h3>
-          {% if research_feature.description %}<p class="recent-card-excerpt">{{ research_feature.description }}</p>{% endif %}
-          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></span>
-        </a>
-      {% else %}
-        <a class="recent-card-link recent-card-empty" href="{{ '/research/' | relative_url }}">
-          <div class="recent-card-image">
-            <img src="{{ '/assets/images/default-cover.svg' | relative_url }}" alt="" loading="lazy">
-            <span class="image-index">03 / RESEARCH &amp; PRACTICE</span>
-          </div>
-          <div class="recent-card-meta"><span>RESEARCH</span><span>研究与实践</span></div>
-          <h3>研究与实践</h3>
-          <p class="recent-card-excerpt">整理社会学研究、政策与公共议题研究，以及市场研究中的问题、方法与发现。</p>
-          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">进入栏目</span><span class="button-en">EXPLORE SECTION</span></span><span class="button-arrow">↗</span></span>
-        </a>
-      {% endif %}
-    </article>
-  </div>
+        </div>
+      </section>
+    {% endfor %}
+  {% else %}
+    <p class="empty-note">发布第一篇文章后，这里会自动出现每月更新。</p>
+  {% endif %}
 </section>
 
 <section class="home-lower-links">
