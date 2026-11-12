@@ -31,11 +31,11 @@ title: 首页
         {% if latest_post.category_group %}<span>{{ latest_post.category_group }}</span>{% endif %}
         {% if latest_post.subcategory %}<span>{{ latest_post.subcategory }}</span>{% endif %}
       </div>
-      <a class="hero-read-link" href="{{ latest_post.url | relative_url }}">阅读全文 <span>↗</span></a>
+      <a class="hero-read-link" href="{{ latest_post.url | relative_url }}"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></a>
     {% else %}
       <h1>最近更新</h1>
       <p class="hero-description">这里将展示你最新发布的文章。</p>
-      <a class="hero-read-link" href="{{ '/archive/' | relative_url }}">查看归档 <span>↗</span></a>
+      <a class="hero-read-link" href="{{ '/archive/' | relative_url }}"><span class="button-copy"><span class="button-zh">查看归档</span><span class="button-en">VIEW ARCHIVE</span></span><span class="button-arrow">↗</span></a>
     {% endif %}
   </div>
   <div class="hero-index">01 / 03</div>
@@ -48,7 +48,7 @@ title: 首页
       <h2>最近更新</h2>
       <p>从不同的内容入口，继续阅读与观察。</p>
     </div>
-    <a class="more-pill" href="{{ '/archive/' | relative_url }}">更多文章 <span>→</span></a>
+    <a class="more-pill" href="{{ '/archive/' | relative_url }}"><span class="button-copy"><span class="button-zh">更多文章</span><span class="button-en">MORE ARTICLES</span></span><span class="button-arrow">→</span></a>
   </div>
 
   <div class="recent-grid">
@@ -66,7 +66,7 @@ title: 首页
           </div>
           <h3>{{ film_feature.title }}</h3>
           {% if film_feature.description %}<p class="recent-card-excerpt">{{ film_feature.description }}</p>{% endif %}
-          <span class="recent-card-more">阅读全文 ↗</span>
+          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></span>
         </a>
       {% else %}
         <a class="recent-card-link recent-card-empty" href="{{ '/content/' | relative_url }}">
@@ -77,7 +77,7 @@ title: 首页
           <div class="recent-card-meta"><span>CREATION</span><span>影视阅读</span></div>
           <h3>影视阅读</h3>
           <p class="recent-card-excerpt">电影、剧集、纪录片与书籍。记录观看之后的思考，也整理阅读留下的问题。</p>
-          <span class="recent-card-more">进入栏目 ↗</span>
+          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">进入栏目</span><span class="button-en">EXPLORE SECTION</span></span><span class="button-arrow">↗</span></span>
         </a>
       {% endif %}
     </article>
@@ -96,7 +96,7 @@ title: 首页
           </div>
           <h3>{{ social_feature.title }}</h3>
           {% if social_feature.description %}<p class="recent-card-excerpt">{{ social_feature.description }}</p>{% endif %}
-          <span class="recent-card-more">阅读全文 ↗</span>
+          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></span>
         </a>
       {% else %}
         <a class="recent-card-link recent-card-empty" href="{{ '/content/' | relative_url }}">
@@ -107,7 +107,7 @@ title: 首页
           <div class="recent-card-meta"><span>CREATION</span><span>社会观察</span></div>
           <h3>社会观察</h3>
           <p class="recent-card-excerpt">从日常经验与公共事件出发，关注社会现实中的具体处境、变化与问题。</p>
-          <span class="recent-card-more">进入栏目 ↗</span>
+          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">进入栏目</span><span class="button-en">EXPLORE SECTION</span></span><span class="button-arrow">↗</span></span>
         </a>
       {% endif %}
     </article>
@@ -126,7 +126,7 @@ title: 首页
           </div>
           <h3>{{ research_feature.title }}</h3>
           {% if research_feature.description %}<p class="recent-card-excerpt">{{ research_feature.description }}</p>{% endif %}
-          <span class="recent-card-more">阅读全文 ↗</span>
+          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">阅读全文</span><span class="button-en">READ ARTICLE</span></span><span class="button-arrow">↗</span></span>
         </a>
       {% else %}
         <a class="recent-card-link recent-card-empty" href="{{ '/research/' | relative_url }}">
@@ -137,7 +137,7 @@ title: 首页
           <div class="recent-card-meta"><span>RESEARCH</span><span>研究与实践</span></div>
           <h3>研究与实践</h3>
           <p class="recent-card-excerpt">整理社会学研究、政策与公共议题研究，以及市场研究中的问题、方法与发现。</p>
-          <span class="recent-card-more">进入栏目 ↗</span>
+          <span class="recent-card-more"><span class="button-copy"><span class="button-zh">进入栏目</span><span class="button-en">EXPLORE SECTION</span></span><span class="button-arrow">↗</span></span>
         </a>
       {% endif %}
     </article>
