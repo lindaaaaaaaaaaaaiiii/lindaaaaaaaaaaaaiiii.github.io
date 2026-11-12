@@ -258,3 +258,33 @@ body.post-page .site-footer{
 @media(max-width:700px){
   .post-page .site-header{top:0}
 }
+
+
+/* Bilingual action labels: Chinese first, English subtitle below */
+.button-copy{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;line-height:1.2}
+.button-zh{display:block}
+.button-en{display:block;font:8px/1.2 "DM Mono",monospace;letter-spacing:.13em;color:#888;text-transform:uppercase}
+.more-pill{gap:18px;padding:14px 24px}
+.more-pill .button-copy{min-width:112px}
+.more-pill .button-en{font-size:8px;letter-spacing:.15em;color:#858585}
+.more-pill .button-arrow{font-size:24px;line-height:1}
+.more-pill:hover .button-en{color:rgba(255,255,255,.68)}
+.hero-read-link{align-items:center;gap:16px}
+.hero-read-link .button-copy{align-items:flex-start;gap:5px}
+.hero-read-link .button-en{color:rgba(255,255,255,.58);font-size:8px}
+.hero-read-link .button-arrow{font-size:16px}
+.recent-card-more{display:inline-flex;align-items:center;gap:9px;margin-top:4px}
+.recent-card-more .button-copy{align-items:flex-start;gap:4px}
+.recent-card-more .button-zh{font-size:11px}
+.recent-card-more .button-en{font-size:7px;letter-spacing:.1em;color:#999}
+.recent-card-more .button-arrow{font-size:14px;color:#777}
+.back-link{display:inline-flex;text-decoration:none}
+.back-link .button-copy{align-items:flex-start;gap:4px}
+.back-link .button-zh{font-size:12px}
+.back-link .button-en{font-size:8px;color:#999}
+body.post-page .back-link .button-en{color:#777}
+@media(max-width:650px){
+  .more-pill{gap:10px;padding:12px 17px}
+  .more-pill .button-copy{min-width:96px}
+  .more-pill .button-zh{font-size:14px}
+}
