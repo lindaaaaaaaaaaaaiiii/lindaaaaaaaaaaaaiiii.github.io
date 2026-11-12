@@ -19,6 +19,7 @@ title: 首页
   </div>
 
   <div class="hero-feature">
+    {% if latest_post %}<a class="hero-feature-hitarea" href="{{ latest_post.url | relative_url }}" aria-label="阅读全文：{{ latest_post.title | escape }}"></a>{% endif %}
     <p class="hero-kicker">LATEST FEATURED / 最新更新</p>
     {% if latest_post %}
       <p class="hero-date">{{ latest_post.date | date: "%Y-%m-%d" }}</p>
