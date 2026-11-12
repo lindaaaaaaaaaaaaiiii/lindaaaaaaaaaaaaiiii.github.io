@@ -27,6 +27,34 @@
   var body = document.body;
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* Repair the previously truncated Mare of Easttown cover from verified image chunks. */
+  var mareCoverImages = Array.prototype.slice.call(document.querySelectorAll('img[src*="mare-of-easttown-cover.svg"]'));
+  if (mareCoverImages.length) {
+    var mareCoverParts = [
+      '/assets/uploads/mare-cover-01.txt',
+      '/assets/uploads/mare-cover-02.txt',
+      '/assets/uploads/mare-cover-03.txt',
+      '/assets/uploads/mare-cover-04.txt',
+      '/assets/uploads/mare-cover-05.txt'
+    ];
+    Promise.all(mareCoverParts.map(function (url) {
+      return fetch(url).then(function (response) {
+        if (!response.ok) throw new Error('Cover image part unavailable: ' + url);
+        return response.text();
+      });
+    })).then(function (parts) {
+      var encodedImage = parts.join('').replace(/\\s/g, '');
+      if (!encodedImage.startsWith('UklGR') || encodedImage.length % 4 !== 0) {
+        throw new Error('Repaired cover image data failed validation');
+      }
+      mareCoverImages.forEach(function (img) {
+        img.src = 'data:image/webp;base64,' + encodedImage;
+      });
+    }).catch(function (error) {
+      console.error('Could not restore Mare of Easttown cover image', error);
+    });
+  }
+
   /* Detect the actual page content instead of relying on a Liquid URL comparison. */
   var homeHero = document.querySelector('.home-hero-single');
   if (homeHero) {
