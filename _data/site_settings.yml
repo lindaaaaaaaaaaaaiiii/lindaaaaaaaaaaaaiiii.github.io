@@ -35,4 +35,16 @@ about:
       这里便是我保存这些探索的地方，
       在某种程度上来说，这是我的一部分。
   photo: /assets/uploads/wechatimg338.jpg
-  shelf_items: []
+  shelf_items:
+    - type: music
+      title: HIT ME HARD AND SOFT
+      creator: Billie Eilish
+      cover: "https://coverartarchive.org/release/51b16f7c-72d1-416c-9aad-731cde6ba19a/42353133381-1200.jpg"
+    - type: book
+      title: 日暮时分
+      creator: 黄晳暎
+      cover: "https://motatabooks.com/cdn/shop/files/9787505757158.jpg?v=1752455195&width=1946"
+    - type: film
+      title: 攀登者
+      creator: "导演：李仁港"
+      cover: "https://resizing.flixster.com/okBrZTAqJjJUtnC7UrJkEwldg64%3D/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzliMmIwZDc4LTg1YjItNDQxOS04ODgzLWUwYjhhMTQxMTZlMi53ZWJw"
