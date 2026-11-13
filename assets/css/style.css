@@ -1240,3 +1240,85 @@ body.section-page .about-connect__footer{
   body.section-page .about-story__body p,
   body.section-page .about-approach__body p{font-size:14px;line-height:2}
 }
+
+/* Light long-form reading theme: keep the cinematic cover, make the reading surface white. */
+body.post-page{
+  --ink:#262626;
+  --muted:#77736d;
+  --line:#e8e5df;
+  --paper:#fff;
+  --soft:#f7f6f3;
+  --accent:#986b55;
+  --article-bg:#fff;
+  --article-surface:#f7f6f3;
+  --article-line:#e8e5df;
+  --article-text:#292929;
+  --article-muted:#77736d;
+  --article-accent:#986b55;
+  background:#fff!important;
+  color:#292929!important;
+}
+body.post-page::before{display:none!important}
+body.post-page .site-header,
+body.post-page .site-main,
+body.post-page .site-footer{
+  background:#fff!important;
+}
+body.post-page .site-header{border-bottom-color:#e8e5df}
+body.post-page .site-footer{
+  border-top-color:#e8e5df;
+  color:#8a867f;
+}
+body.post-page .wordmark{color:#242424}
+body.post-page .wordmark span{color:#85817a}
+body.post-page .site-header nav a{color:#55514c}
+body.post-page .site-header nav a:hover{color:#171717}
+body.post-page .back-link{color:#77736d}
+body.post-page .back-link .button-en{color:#99948c}
+body.post-page .article{color:#292929}
+body.post-page .article-header--standalone .eyebrow{color:#8a6b58}
+body.post-page .article-header--standalone h1{color:#242424}
+body.post-page .article-header--standalone .article-subtitle{color:#68645e}
+body.post-page .article-header--standalone .article-meta{color:#8a867f}
+body.post-page .prose{
+  color:#333!important;
+}
+body.post-page .prose p:first-child{color:#333}
+body.post-page .prose h2,
+body.post-page .prose h3,
+body.post-page .prose h4{
+  color:#242424;
+}
+body.post-page .prose blockquote{
+  background:#f7f6f3;
+  border-left-color:#b18a72;
+  color:#625d56;
+}
+body.post-page .prose strong{color:#242424}
+body.post-page .prose em{color:#514b45}
+body.post-page .prose a{
+  color:#875b43;
+  text-decoration-color:rgba(135,91,67,.38);
+}
+body.post-page .prose li::marker{color:#a17b63}
+body.post-page .prose hr{border-top-color:#dedbd5}
+body.post-page .prose th,
+body.post-page .prose td{border-bottom-color:#e8e5df}
+body.post-page .prose th{color:#292929}
+body.post-page .prose td{color:#4b4843}
+body.post-page .prose code{
+  background:#f2f0ec;
+  color:#754d38;
+}
+body.post-page .prose pre{
+  background:#f5f4f1;
+  border-color:#e5e1da;
+  color:#333;
+}
+body.post-page .tag-row{
+  border-top-color:#e8e5df;
+  color:#77736d;
+}
+body.post-page .article-end{color:#aaa49a}
+body.post-page .reading-progress__bar{background:#986b55}
+
