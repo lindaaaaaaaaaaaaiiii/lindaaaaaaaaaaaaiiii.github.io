@@ -112,6 +112,38 @@ collections:
                 widget: "image"
                 required: false
                 hint: "上传一张自然、不刻意摆拍的照片。建议竖图；留空时页面会自动采用纯文字首屏。"
+              - label: "个人书架 / 收藏的书、电影与音乐"
+                name: "shelf_items"
+                widget: "list"
+                required: false
+                summary: "{{fields.type}} · {{fields.title}}"
+                hint: "按列表顺序展示。添加封面、作品名称和作者/导演/艺人；链接为可选项。"
+                fields:
+                  - label: "作品类型"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      - { label: "书籍", value: "book" }
+                      - { label: "电影 / 剧集", value: "film" }
+                      - { label: "音乐专辑", value: "music" }
+                  - label: "作品名称"
+                    name: "title"
+                    widget: "string"
+                  - label: "作者 / 导演 / 艺人"
+                    name: "creator"
+                    widget: "string"
+                    required: false
+                  - label: "封面图片"
+                    name: "cover"
+                    widget: "image"
+                  - label: "一句话记录"
+                    name: "note"
+                    widget: "text"
+                    required: false
+                  - label: "相关链接（可选）"
+                    name: "link"
+                    widget: "string"
+                    required: false
               - label: "个人介绍段落"
                 name: "paragraphs"
                 widget: "list"
