@@ -42,7 +42,7 @@ about:
     - type: book
       title: 日暮时分
       creator: 黄晳暎
-      cover: "https://motatabooks.com/cdn/shop/files/s34894808.jpg?v=1752455195&width=416"
+      cover: /assets/uploads/ning-dusk-cover.jpg
     - type: film
       title: "Everest: The Other Side"
-      cover: "https://static.cinemagia.ro/img/db/movie/33/30/751/everest-the-other-side-162064l.jpg"
+      cover: /assets/uploads/everest-the-other-side.jpg
