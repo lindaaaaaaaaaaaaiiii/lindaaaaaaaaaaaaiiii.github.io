@@ -1322,3 +1322,141 @@ body.post-page .tag-row{
 body.post-page .article-end{color:#aaa49a}
 body.post-page .reading-progress__bar{background:#986b55}
 
+
+
+/* Minimal editorial bookshelf on the About page */
+body.section-page .about-shelf-section{
+  grid-template-columns:190px minmax(0,1fr);
+}
+body.section-page .about-shelf-kicker{
+  margin:0 0 12px;
+  color:#a59b8d;
+  font:9px/1.7 "DM Mono",monospace;
+  letter-spacing:.19em;
+}
+body.section-page .about-shelf-section .about-interests__body h2{
+  margin-bottom:12px;
+}
+body.section-page .about-shelf-intro{
+  margin:0 0 34px;
+  color:#aaa69e;
+  font:13px/1.9 "Noto Serif SC",serif;
+}
+body.section-page .about-shelf-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:26px 20px;
+  align-items:start;
+}
+body.section-page .about-shelf-item{
+  min-width:0;
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+body.section-page .about-shelf-cover{
+  position:relative;
+  aspect-ratio:3/4;
+  overflow:hidden;
+  background:#252522;
+  border:1px solid #3c3a35;
+  box-shadow:0 10px 24px rgba(0,0,0,.2);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+body.section-page .about-shelf-cover--music{aspect-ratio:1/1}
+body.section-page .about-shelf-cover--film{aspect-ratio:2/3}
+body.section-page .about-shelf-cover img{
+  display:block;
+  width:100%;
+  height:100%;
+  margin:0;
+  object-fit:cover;
+  filter:saturate(.82);
+  transition:transform .55s cubic-bezier(.2,.65,.25,1),filter .35s ease;
+}
+body.section-page .about-shelf-item:hover .about-shelf-cover{
+  transform:translateY(-5px);
+  border-color:#817565;
+  box-shadow:0 18px 34px rgba(0,0,0,.32);
+}
+body.section-page .about-shelf-item:hover .about-shelf-cover img{
+  transform:scale(1.035);
+  filter:saturate(1);
+}
+body.section-page .about-shelf-cover__placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:16px;
+  color:#d9d2c6;
+  background:linear-gradient(145deg,#393630,#1e1e1c 72%);
+  font:9px/1.6 "DM Mono",monospace;
+  letter-spacing:.12em;
+}
+body.section-page .about-shelf-cover__placeholder span:last-child{
+  font:400 16px/1.6 "Noto Serif SC",serif;
+  letter-spacing:0;
+}
+body.section-page .about-shelf-item__meta{padding:14px 2px 0}
+body.section-page .about-shelf-item__type{
+  display:block;
+  margin-bottom:8px;
+  color:#a58f79;
+  font:9px/1.5 "DM Mono",monospace;
+  letter-spacing:.15em;
+}
+body.section-page .about-shelf-item h3{
+  margin:0 0 5px;
+  color:#efede7;
+  font:400 16px/1.6 "Noto Serif SC",serif;
+}
+body.section-page .about-shelf-item__creator{
+  margin:0;
+  color:#aaa69e;
+  font:11px/1.7 "Noto Serif SC",serif;
+}
+body.section-page .about-shelf-item__note{
+  margin:9px 0 0;
+  color:#99958d;
+  font:11px/1.8 "Noto Serif SC",serif;
+}
+body.section-page .about-shelf-empty{
+  min-height:120px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:12px;
+  padding:24px 28px;
+  border:1px solid #3a3935;
+  background:linear-gradient(110deg,#20201e,#191918);
+}
+body.section-page .about-shelf-empty span{
+  color:#a58f79;
+  font:9px/1.6 "DM Mono",monospace;
+  letter-spacing:.17em;
+}
+body.section-page .about-shelf-empty p{
+  margin:0;
+  color:#b1ada5;
+  font:13px/1.9 "Noto Serif SC",serif;
+}
+body.section-page .about-shelf-rail{
+  height:7px;
+  margin-top:24px;
+  border-top:1px solid #696258;
+  border-bottom:1px solid #34322e;
+  background:linear-gradient(180deg,#3c3933 0%,#201f1d 100%);
+  box-shadow:0 8px 12px rgba(0,0,0,.2);
+}
+@media(max-width:900px){
+  body.section-page .about-shelf-section{grid-template-columns:1fr;gap:20px}
+  body.section-page .about-shelf-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 16px}
+}
+@media(max-width:600px){
+  body.section-page .about-shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}
+  body.section-page .about-shelf-cover__placeholder{padding:12px}
+  body.section-page .about-shelf-item h3{font-size:14px}
+  body.section-page .about-shelf-intro{font-size:12px}
+}
