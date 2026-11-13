@@ -35,7 +35,7 @@ permalink: /about/
     <div class="about-section-marker">02 / THE SHELF</div>
     <div class="about-interests__body">
       <p class="about-shelf-kicker">BOOKS · FILMS · MUSIC</p>
-      <h2>正在读、看与听</h2>
+      <h2>interested</h2>
       <p class="about-shelf-intro">一些让我停下来、反复想起，或愿意再次回到其中的作品。</p>
       {% assign shelf_items = about_settings.shelf_items | default: empty %}
       {% if shelf_items.size > 0 %}
@@ -44,7 +44,11 @@ permalink: /about/
           {% if item.link %}<a class="about-shelf-item" href="{{ item.link | escape }}" target="_blank" rel="noopener noreferrer">{% else %}<article class="about-shelf-item">{% endif %}
             <div class="about-shelf-cover about-shelf-cover--{{ item.type | default: 'book' | slugify }}">
               {% if item.cover %}
+              {% if item.cover contains '://' %}
+              <img src="{{ item.cover | escape }}" alt="{{ item.title | escape }} 封面" loading="lazy">
+              {% else %}
               <img src="{{ item.cover | relative_url }}" alt="{{ item.title | escape }} 封面" loading="lazy">
+              {% endif %}
               {% else %}
               <div class="about-shelf-cover__placeholder"><span>{{ item.type | upcase }}</span><span>{{ item.title | escape }}</span></div>
               {% endif %}
