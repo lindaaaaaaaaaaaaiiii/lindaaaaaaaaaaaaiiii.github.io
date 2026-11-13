@@ -31,36 +31,40 @@ permalink: /about/
     </div>
   </section>
 
-  <section class="about-interests">
-    <div class="about-section-marker">02 / WHAT I'M CURIOUS ABOUT</div>
+  <section class="about-interests about-shelf-section">
+    <div class="about-section-marker">02 / THE SHELF</div>
     <div class="about-interests__body">
-      <h2>一些持续关注的方向</h2>
-      <div class="about-interest-grid">
-        <a class="about-interest-card" href="{{ '/content/' | relative_url }}">
-          <span>01 / EDUCATION</span>
-          <h3>教育与人的成长</h3>
-          <p>从课堂与具体的人出发，关注知识、经验和成长如何彼此连接。</p>
-          <i>↗</i>
-        </a>
-        <a class="about-interest-card" href="{{ '/content/' | relative_url }}">
-          <span>02 / CULTURE</span>
-          <h3>阅读与电影</h3>
-          <p>在书页和银幕之间，观察故事、人物、记忆与时代。</p>
-          <i>↗</i>
-        </a>
-        <a class="about-interest-card" href="{{ '/content/' | relative_url }}">
-          <span>03 / SOCIETY</span>
-          <h3>社会观察</h3>
-          <p>留意日常经验与公共议题，尝试理解行为背后的社会关系。</p>
-          <i>↗</i>
-        </a>
-        <a class="about-interest-card" href="{{ '/research/' | relative_url }}">
-          <span>04 / RESEARCH</span>
-          <h3>研究与专业探索</h3>
-          <p>对定性研究、消费者洞察、学术研究与证据分析保持兴趣。</p>
-          <i>↗</i>
-        </a>
+      <p class="about-shelf-kicker">BOOKS · FILMS · MUSIC</p>
+      <h2>正在读、看与听</h2>
+      <p class="about-shelf-intro">一些让我停下来、反复想起，或愿意再次回到其中的作品。</p>
+      {% assign shelf_items = about_settings.shelf_items | default: empty %}
+      {% if shelf_items.size > 0 %}
+      <div class="about-shelf-grid">
+        {% for item in shelf_items %}
+          {% if item.link %}<a class="about-shelf-item" href="{{ item.link | escape }}" target="_blank" rel="noopener noreferrer">{% else %}<article class="about-shelf-item">{% endif %}
+            <div class="about-shelf-cover about-shelf-cover--{{ item.type | default: 'book' | slugify }}">
+              {% if item.cover %}
+              <img src="{{ item.cover | relative_url }}" alt="{{ item.title | escape }} 封面" loading="lazy">
+              {% else %}
+              <div class="about-shelf-cover__placeholder"><span>{{ item.type | upcase }}</span><span>{{ item.title | escape }}</span></div>
+              {% endif %}
+            </div>
+            <div class="about-shelf-item__meta">
+              <span class="about-shelf-item__type">{{ item.type | default: "BOOK" | upcase }}</span>
+              <h3>{{ item.title | escape }}</h3>
+              {% if item.creator %}<p class="about-shelf-item__creator">{{ item.creator | escape }}</p>{% endif %}
+              {% if item.note %}<p class="about-shelf-item__note">{{ item.note | escape }}</p>{% endif %}
+            </div>
+          {% if item.link %}</a>{% else %}</article>{% endif %}
+        {% endfor %}
       </div>
+      {% else %}
+      <div class="about-shelf-empty">
+        <span>THE SHELF IS TAKING SHAPE</span>
+        <p>书架正在慢慢添置。可以从一本书、一部电影，或一张专辑开始。</p>
+      </div>
+      {% endif %}
+      <div class="about-shelf-rail" aria-hidden="true"></div>
     </div>
   </section>
 
