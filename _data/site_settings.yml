@@ -43,8 +43,7 @@ about:
     - type: book
       title: 日暮时分
       creator: 黄晳暎
-      cover: "https://motatabooks.com/cdn/shop/files/9787505757158.jpg?v=1752455195&width=1946"
+      cover: /assets/uploads/ning-dusk-cover.jpg
     - type: film
-      title: 攀登者
-      creator: "导演：李仁港"
-      cover: "https://resizing.flixster.com/okBrZTAqJjJUtnC7UrJkEwldg64%3D/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzliMmIwZDc4LTg1YjItNDQxOS04ODgzLWUwYjhhMTQxMTZlMi53ZWJw"
+      title: "Everest: The Other Side"
+      cover: /assets/uploads/everest-the-other-side.jpg

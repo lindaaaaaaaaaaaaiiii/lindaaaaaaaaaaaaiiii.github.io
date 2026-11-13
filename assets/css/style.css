@@ -1460,3 +1460,63 @@ body.section-page .about-shelf-rail{
   body.section-page .about-shelf-item h3{font-size:14px}
   body.section-page .about-shelf-intro{font-size:12px}
 }
+
+
+/* Shelf covers share a common baseline while preserving each artwork's ratio. */
+body.section-page .about-shelf-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;
+}
+body.section-page .about-shelf-item{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+body.section-page .about-shelf-cover,
+body.section-page .about-shelf-cover--music,
+body.section-page .about-shelf-cover--film{
+  height:340px;
+  min-height:340px;
+  aspect-ratio:auto;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  padding:0 8px;
+  overflow:hidden;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+body.section-page .about-shelf-cover img{
+  display:block;
+  width:auto!important;
+  height:auto!important;
+  max-width:100%;
+  max-height:100%;
+  margin:0;
+  object-fit:contain;
+  object-position:center bottom;
+}
+body.section-page .about-shelf-item__meta{
+  flex:1 0 auto;
+  padding:14px 2px 0;
+}
+@media(max-width:900px){
+  body.section-page .about-shelf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  body.section-page .about-shelf-cover,
+  body.section-page .about-shelf-cover--music,
+  body.section-page .about-shelf-cover--film{
+    height:280px;
+    min-height:280px;
+  }
+}
+@media(max-width:600px){
+  body.section-page .about-shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body.section-page .about-shelf-cover,
+  body.section-page .about-shelf-cover--music,
+  body.section-page .about-shelf-cover--film{
+    height:240px;
+    min-height:240px;
+    padding:0 4px;
+  }
+}
