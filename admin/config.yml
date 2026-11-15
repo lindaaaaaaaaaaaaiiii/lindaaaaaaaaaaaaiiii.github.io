@@ -189,8 +189,7 @@ collections:
         options:
           - "影视阅读"
           - "社会观察"
-          - "社会学研究"
-          - "政策与公共议题研究"
+          - "社会与公共议题研究"
           - "市场研究"
       - label: "文章摘要"
         name: "description"
