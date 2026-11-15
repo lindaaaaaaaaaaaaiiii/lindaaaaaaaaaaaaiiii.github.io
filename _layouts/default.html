@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   {% seo %}
+<style>
+@media(max-width:600px){
+  .site-header{flex-wrap:wrap;gap:18px;padding-top:20px;padding-bottom:18px}
+  .site-header nav{width:100%;gap:24px;flex-wrap:wrap}
+  .site-header nav a{white-space:nowrap}
+}
+</style>
 </head>
 <body class="{% if page.layout == 'post' %}post-page{% elsif page.url == '/' %}home-page{% else %}section-page{% endif %}" data-theme-color="{{ page.theme_color | default: '' | escape }}">
 <header class="site-header">
