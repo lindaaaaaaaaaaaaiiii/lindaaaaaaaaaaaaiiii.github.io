@@ -35,7 +35,7 @@ permalink: /about/
     <div class="about-section-marker">02 / THE SHELF</div>
     <div class="about-interests__body">
       <p class="about-shelf-kicker">BOOKS · FILMS · MUSIC</p>
-      <h2>INTERESTED</h2>
+      <h2>recently interested in</h2>
       {% assign shelf_items = about_settings.shelf_items | default: empty %}
       {% if shelf_items.size > 0 %}
       <div class="about-shelf-grid">
