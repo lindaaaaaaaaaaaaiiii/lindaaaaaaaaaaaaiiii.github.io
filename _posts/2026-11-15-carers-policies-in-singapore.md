@@ -1,5 +1,7 @@
 ---
-title: "新加坡照护者政策：书籍章节介绍"
+title: "Carers’ Policies in Singapore"
+cover: /assets/uploads/carers-singapore-hero.webp
+cover_caption: "家庭照护与社区生活 · AI 生成插画"
 subtitle: "Carers’ Policies in Singapore · 与 Chak Kwan Chan 合著"
 date: 2026-11-15T15:45:00+08:00
 permalink: /research/carers-policies-in-singapore/
