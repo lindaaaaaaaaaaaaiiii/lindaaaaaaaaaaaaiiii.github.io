@@ -9,7 +9,10 @@ permalink: /research/
   <span id="policy" aria-hidden="true"></span>
   <p class="eyebrow">01 / SOCIAL & PUBLIC ISSUES RESEARCH</p><h2>社会与公共议题研究</h2>
   <p>研究设计、文献梳理、访谈与资料分析，关注社会问题、公共政策及项目评估。</p>
-  {% assign posts = site.posts | where_exp: "post", "post.subcategory == '社会与公共议题研究' or post.subcategory == '社会学研究' or post.subcategory == '政策与公共议题研究'" %}
+  {% assign merged_posts = site.posts | where: "subcategory", "社会与公共议题研究" %}
+  {% assign sociology_posts = site.posts | where: "subcategory", "社会学研究" %}
+  {% assign policy_posts = site.posts | where: "subcategory", "政策与公共议题研究" %}
+  {% assign posts = merged_posts | concat: sociology_posts | concat: policy_posts | sort: "date" | reverse %}
   {% include post-list.html posts=posts %}
 </section>
 <section class="taxonomy" id="market">
