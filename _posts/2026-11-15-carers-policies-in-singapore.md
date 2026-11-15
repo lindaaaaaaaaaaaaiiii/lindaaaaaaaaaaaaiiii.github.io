@@ -1,8 +1,8 @@
 ---
 title: "Carers’ Policies in Singapore"
-cover: /assets/uploads/carers-singapore-hero.webp
-cover_caption: "家庭照护与社区生活 · AI 生成插画"
-subtitle: "Carers’ Policies in Singapore · 与 Chak Kwan Chan 合著"
+cover: /assets/uploads/carers-singapore-hero-v2.webp
+cover_caption: "Care across generations · AI-generated illustration"
+subtitle: "Co-authored with Chak Kwan Chan · Routledge"
 date: 2026-11-15T15:45:00+08:00
 permalink: /research/carers-policies-in-singapore/
 author: "Ning He & Chak Kwan Chan"
