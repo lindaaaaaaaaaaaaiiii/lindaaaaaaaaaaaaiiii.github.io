@@ -1,24 +1,14 @@
 ---
 layout: default
-title: 留言与联系
+title: 联系
 permalink: /contact/
 ---
-<div class="page-intro"><p class="eyebrow">CONTACT / LEAVE A NOTE</p><h1>一起聊聊。</h1><p>关于阅读、影视、社会研究，或一个值得继续追问的问题。欢迎来信，也欢迎留下你的想法。</p></div>
+<div class="page-intro"><p class="eyebrow">CONTACT / SAY HELLO</p><h1>一起聊聊。</h1><p>关于阅读、影视、社会研究，或一个值得继续追问的问题。欢迎来信。</p></div>
 <section class="contact-email" aria-labelledby="email-title">
-<p class="eyebrow">01 / GET IN TOUCH</p><h2 id="email-title">联系方式</h2>
+<p class="eyebrow">GET IN TOUCH</p><h2 id="email-title">联系方式</h2>
 <a class="contact-email-link" href="mailto:ningheeee@gmail.com">ningheeee@gmail.com ↗</a>
 <p>工作机会、项目合作，或想深入交流的话题，都可以通过邮件联系。</p>
 <button class="pill" id="copy-email" type="button">复制邮箱</button><span id="copy-status" role="status"></span>
-</section>
-<section class="guestbook" aria-labelledby="guestbook-title">
-<p class="eyebrow">02 / GUESTBOOK</p><h2 id="guestbook-title">留下一点想法。</h2>
-<p>欢迎分享最近读到的书、看过的电影，或你正在关注的问题。</p>
-<div class="guestbook-actions"><a class="pill pill-dark" href="https://github.com/lindaaaaaaaaaaaaiiii/lindaaaaaaaaaaaaiiii.github.io/issues/1#new_comment_field" target="_blank" rel="noopener noreferrer">公开留言 ↗</a><button class="pill" id="refresh-notes" type="button">刷新留言</button></div>
-<p class="guestbook-hint">留言将在 GitHub 页面提交，需要登录 GitHub。提交后回到这里刷新即可查看；所有留言均为公开内容。</p>
-<p id="notes-status" role="status" aria-live="polite">正在读取留言…</p>
-<ol id="guestbook-notes" aria-label="公开留言"></ol>
-<button class="pill" id="more-notes" type="button" hidden>加载更多</button>
-<p><a href="https://github.com/lindaaaaaaaaaaaaiiii/lindaaaaaaaaaaaaiiii.github.io/issues/1" target="_blank" rel="noopener noreferrer">在 GitHub 查看完整留言板 ↗</a></p>
 </section>
 <style>
 .contact-email,.guestbook{padding:48px 0 56px;border-bottom:1px solid var(--line);max-width:900px}
@@ -37,30 +27,8 @@ permalink: /contact/
 #more-notes[hidden]{display:none}
 </style>
 <script>
-(function(){
-var email='ningheeee@gmail.com', status=document.getElementById('notes-status'),list=document.getElementById('guestbook-notes'),more=document.getElementById('more-notes'),refresh=document.getElementById('refresh-notes'),page=1,busy=false;
-document.getElementById('copy-email').addEventListener('click',async function(){try{await navigator.clipboard.writeText(email);document.getElementById('copy-status').textContent='已复制';}catch(e){document.getElementById('copy-status').textContent='请选中上方邮箱复制。';}});
-async function load(reset){
-if(busy)return;busy=true;refresh.disabled=true;more.disabled=true;
-if(reset){page=1;list.replaceChildren();more.hidden=true;}
-status.textContent='正在读取留言…';
-try{
-var response=await fetch('https://api.github.com/repos/lindaaaaaaaaaaaaiiii/lindaaaaaaaaaaaaiiii.github.io/issues/1/comments?per_page=30&page='+page,{cache:'no-store',headers:{Accept:'application/vnd.github+json'}});
-if(!response.ok)throw new Error('Unavailable');
-var notes=await response.json();if(!Array.isArray(notes))throw new Error('Invalid data');
-notes.forEach(function(note){
-var li=document.createElement('li');li.className='guestbook-note';
-var head=document.createElement('header'),author=document.createElement('a'),time=document.createElement('time'),body=document.createElement('div');
-author.textContent=note.user&&note.user.login||'Guest';author.href=note.html_url;author.target='_blank';author.rel='noopener noreferrer';
-time.dateTime=note.created_at;time.textContent=new Date(note.created_at).toLocaleDateString('zh-CN');
-body.className='note-body';body.textContent=note.body||'';
-head.append(author,time);li.append(head,body);list.append(li);
+document.getElementById('copy-email').addEventListener('click',async function(){
+try{await navigator.clipboard.writeText('ningheeee@gmail.com');document.getElementById('copy-status').textContent='已复制';}
+catch(e){document.getElementById('copy-status').textContent='请选中上方邮箱复制。';}
 });
-status.textContent=list.children.length?'已显示 '+list.children.length+' 条留言。':'还没有留言，欢迎留下第一条想法。';
-more.hidden=notes.length<30;page++;
-}catch(e){status.textContent='暂时无法读取留言，请稍后刷新，或通过下方链接打开 GitHub 留言板。';}
-finally{busy=false;refresh.disabled=false;more.disabled=false;}
-}
-refresh.addEventListener('click',function(){load(true);});more.addEventListener('click',function(){load(false);});load(true);
-})();
 </script>
