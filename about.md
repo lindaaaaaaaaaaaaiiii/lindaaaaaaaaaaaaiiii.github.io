@@ -35,8 +35,7 @@ permalink: /about/
     <div class="about-section-marker">02 / THE SHELF</div>
     <div class="about-interests__body">
       <p class="about-shelf-kicker">BOOKS · FILMS · MUSIC</p>
-      <h2>interested</h2>
-      <p class="about-shelf-intro">一些让我停下来、反复想起，或愿意再次回到其中的作品。</p>
+      <h2>INTERESTED</h2>
       {% assign shelf_items = about_settings.shelf_items | default: empty %}
       {% if shelf_items.size > 0 %}
       <div class="about-shelf-grid">
