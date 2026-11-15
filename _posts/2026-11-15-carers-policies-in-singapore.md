@@ -21,11 +21,11 @@ tags:
 
 ## 关于这本书
 
-*Carers’ Policies in East Asia: Challenges, Responses and Well-being* 由 Chak Kwan Chan、Kinglun Ngok 与 Florence Meng Soi Fong 主编，Routledge 出版。
+Carers’ Policies in East Asia: Challenges, Responses and Well-being 由 Chak Kwan Chan、Kinglun Ngok 与 Florence Meng Soi Fong 主编，Routledge 出版。
 
 本书比较中国、日本、韩国、新加坡、台湾与香港的照护者政策，讨论社会经济变迁下的照护需求，以及政策如何支持家庭照护者、减轻照护负担，改善照护双方的福祉。
 
-## 我参与撰写的章节
+## 参与撰写部分
 
 我与 Chak Kwan Chan 共同撰写了第 5 章 **Carers’ Policies in Singapore（新加坡照护者政策）**，收录于本书第 79–94 页。
 
