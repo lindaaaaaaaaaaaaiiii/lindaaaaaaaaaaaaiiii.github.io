@@ -1520,3 +1520,89 @@ body.section-page .about-shelf-item__meta{
     padding:0 4px;
   }
 }
+
+/* Warm paper surfaces for section pages; homepage keeps its charcoal theme. */
+body.section-page{
+  --ink:#292824;--muted:#726e65;--line:#dcd7ce;--paper:#f4f1ea;
+  --soft:#eae5dc;--accent:#875c43;
+  background:#f4f1ea;color:#292824;color-scheme:light;
+}
+body.section-page .site-header,
+body.section-page .site-main,
+body.section-page .site-footer{background:transparent;color:#292824}
+body.section-page .site-header,
+body.section-page .site-footer,
+body.section-page .page-intro,
+body.section-page .taxonomy,
+body.section-page .post-list li,
+body.section-page .archive-year,
+body.section-page .about-intro,
+body.section-page .about-story,
+body.section-page .about-interests,
+body.section-page .about-approach{border-color:#dcd7ce}
+body.section-page .wordmark,
+body.section-page .taxonomy h2,
+body.section-page .taxonomy h3,
+body.section-page .section-heading h2,
+body.section-page .post-list li>a,
+body.section-page .archive-editorial-card>a,
+body.section-page .archive-editorial-card h3,
+body.section-page .about-intro__copy h1,
+body.section-page .about-story__body h2,
+body.section-page .about-interests__body h2,
+body.section-page .about-interest-card h3,
+body.section-page .about-shelf-item h3,
+body.section-page .about-connect h2,
+body.section-page .prose h2,
+body.section-page .prose h3{color:#292824}
+body.section-page .site-header nav a,
+body.section-page .section-heading>a,
+body.section-page .page-intro>p:last-child,
+body.section-page .intro,
+body.section-page .taxonomy>p:not(.eyebrow),
+body.section-page .post-excerpt,
+body.section-page .empty-note,
+body.section-page .archive-editorial-description,
+body.section-page .archive-editorial-meta,
+body.section-page .about-intro__english,
+body.section-page .about-story__body p,
+body.section-page .about-approach__body p,
+body.section-page .about-connect>p:not(.eyebrow),
+body.section-page .about-shelf-item__creator,
+body.section-page .about-shelf-item__note,
+body.section-page .prose{color:#625e56}
+body.section-page .eyebrow,
+body.section-page .wordmark span,
+body.section-page .post-date,
+body.section-page .post-arrow,
+body.section-page .post-list small,
+body.section-page .site-footer,
+body.section-page .archive-year h2,
+body.section-page .archive-editorial-year-heading h2,
+body.section-page .archive-editorial-year-heading>span,
+body.section-page .archive-editorial-meta time,
+body.section-page .about-section-marker,
+body.section-page .about-intro__copy .eyebrow,
+body.section-page .about-intro__chinese,
+body.section-page .about-shelf-intro,
+body.section-page .about-shelf-kicker,
+body.section-page .about-shelf-item__type,
+body.section-page .about-connect .eyebrow{color:#787166}
+body.section-page .site-header nav a:hover,
+body.section-page .section-heading>a:hover,
+body.section-page .prose a{color:#875c43}
+body.section-page .topic-grid a,
+body.section-page .about-interest-card{background:#ece7de;border-color:#dcd7ce;color:#292824}
+body.section-page .topic-grid a:hover,
+body.section-page .about-interest-card:hover{background:#e3ddd2}
+body.section-page .topic-grid span,
+body.section-page .topic-grid i,
+body.section-page .about-interest-card>span,
+body.section-page .about-interest-card p{color:#726e65}
+body.section-page .about-approach__body blockquote{color:#3f3c35}
+body.section-page .about-connect .about-connect__signoff{color:#875c43}
+body.section-page .archive-editorial-tags span{border-color:#c7bfb1;color:#726655}
+body.section-page .pill{border-color:#b8afa1;color:#292824}
+body.section-page .pill:hover{border-color:#625e56}
+body.section-page .pill-dark{background:#292824;border-color:#292824;color:#f4f1ea}
+body.section-page .pill-dark:hover{background:#474238}
