@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1200" viewBox="0 0 2400 1200">
+<title>Care, family and policy — typographic background</title>
+<rect width="2400" height="1200" fill="#232724"/>
+<path d="M80 100H2320M80 1100H2320M1530 100V1100" stroke="#8c9585" stroke-width="2" opacity=".35"/>
+<g font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="-10">
+<text x="70" y="395" font-size="340" fill="#bfc3ad">CARE</text>
+<text x="740" y="710" font-size="290" fill="#777e70">FAMILY</text>
+<text x="1240" y="1030" font-size="240" fill="#b3a58c">POLICY</text>
+</g>
+<g font-family="monospace" font-size="24" letter-spacing="5" fill="#d5d3c6">
+<text x="85" y="70">SOCIAL RESEARCH / SINGAPORE</text>
+<text x="1590" y="175">SUPPORT ACROSS GENERATIONS</text>
+<text x="1590" y="225">WORK · CARE · WELL-BEING</text>
+<text x="85" y="1150">FAMILY CARERS / PUBLIC POLICY / GENDER EQUALITY</text>
+</g>
+<path d="M90 490H620M1660 340H2290" stroke="#b3a58c" stroke-width="3"/>
+</svg>

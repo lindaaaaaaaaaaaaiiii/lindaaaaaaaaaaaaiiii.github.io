@@ -1,7 +1,7 @@
 ---
 title: "Carers’ Policies in Singapore"
-cover: /assets/uploads/carers-singapore-hero-v2.webp
-cover_caption: "Care across generations · AI-generated illustration"
+cover: /assets/uploads/carers-singapore-type.svg
+cover_caption: "CARE / FAMILY / POLICY"
 subtitle: "Co-authored with Chak Kwan Chan · Routledge"
 date: 2026-11-15T15:45:00+08:00
 permalink: /research/carers-policies-in-singapore/
