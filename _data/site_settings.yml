@@ -6,7 +6,7 @@ homepage:
   monthly_description: 每个月，留下最近的三篇记录。向左右滑动，继续阅读。
   research_english: 02 / RESEARCH & PRACTICE
   creation_english: 01 / CREATION
-  hero_background: /assets/images/river-hero.svg
+  hero_background: /assets/uploads/carers-singapore-type.svg
   archive_english: 03 / ARCHIVE
   research_title: 研究与实践
   show_monthly_updates: true
@@ -17,7 +17,7 @@ homepage:
   latest_label: LATEST FEATURED / 最新更新
   monthly_more_label: 更多文章
   creation_description: 影视阅读 · 社会观察
-  hero_background_alt: ""
+  hero_background_alt: "CARE / FAMILY / POLICY — English typographic background"
   archive_description: 按时间回看所有记录
 about:
   eyebrow: ABOUT / A LITTLE ABOUT ME
