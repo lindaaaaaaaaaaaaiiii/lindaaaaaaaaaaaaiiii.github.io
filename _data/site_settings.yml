@@ -13,11 +13,12 @@ homepage:
   monthly_eyebrow: RECENT UPDATES / MONTHLY JOURNAL
   creation_title: 创作
   research_description: 社会与公共议题 · 市场研究
+  archive_title: 文章归档
   show_home_links: true
   latest_label: LATEST FEATURED / 最新更新
   monthly_more_label: 更多文章
   creation_description: 影视阅读 · 社会观察
-  hero_background_alt: "CARE / FAMILY / POLICY — English typographic background"
+  hero_background_alt: CARE / FAMILY / POLICY — English typographic background
   archive_description: 按时间回看所有记录
 about:
   eyebrow: ABOUT / A LITTLE ABOUT ME
@@ -33,12 +34,12 @@ about:
       它们看起来属于不同的领域，却常常把我带回相似的问题：人如何理解自己，又如何在具体的社会环境中生活？
       这里便是我保存这些探索的地方，
       在某种程度上来说，这是我的一部分。
-  photo: /assets/uploads/wechatimg338.jpg
+  photo: /assets/uploads/img_1738.jpg
   shelf_items:
     - type: music
       title: HIT ME HARD AND SOFT
       creator: Billie Eilish
-      cover: "https://coverartarchive.org/release/51b16f7c-72d1-416c-9aad-731cde6ba19a/42353133381-1200.jpg"
+      cover: https://coverartarchive.org/release/51b16f7c-72d1-416c-9aad-731cde6ba19a/42353133381-1200.jpg
     - type: book
       title: 日暮时分
       creator: 黄晳暎
