@@ -21,7 +21,7 @@ tags:
 
 不可否认，这种“姐妹”情谊在互联网语境下确实为女性提供了一种低成本的情感连接方式，让陌生女性之间迅速建立共情关系，在经验分享、情绪安慰和性别议题的讨论中形成临时的支持系统。尤其是在面对性别暴力、职场歧视、婚恋困境等议题时，“姐妹”这一称呼往往能制造出一种共同在在场的感觉，使个体经验不再显得孤立。
 
-然而恰恰是因为这个词承载了太多女性寻求连结的愿望，我们才更需保持警惕：这种即时且松散的情谊，是否容易被简化为消费动员的话术？又是否容易在情绪宣泄后就归于沉寂？为了寻找更具韧性的连接，引入 bell hooks 关于 sisterhood 的讨论则显得尤为必要。将理论作为一面镜子，并非为了苛责日常的网络用语，而是试图追问如何在短暂的抱团取暖之外，建立真正有力量的团结。
+然而恰恰是因为这个词承载了太多女性寻求连结的愿望，我们才更需保持警惕：这种即时且松散的情谊，是否容易被简化为消费动员的话术？又是否容易在情绪宣泄后就归于沉寂？为了寻找更具韧性的连接，引入 bell hooks 关于 sisterhood 的讨论则显得尤为必要。[^1][^2]将理论作为一面镜子，并非为了苛责日常的网络用语，而是试图追问如何在短暂的抱团取暖之外，建立真正有力量的团结。
 
 ## 01 — 共同受害叙事
 
@@ -71,7 +71,8 @@ bell hooks 提出，真正的女性情谊（sisterhood）应当建立在“分�
 
 ---
 
-## 参考文献
+## 注释与参考资料
 
-1. Hooks, B. (2000a). *Feminism Is for Everybody: Passionate Politics*. Routledge.
-2. Hooks, B. (2000b). *Feminist Theory: From Margin to Center*. South End Press.
+[^1]: bell hooks：《Feminism Is for Everybody: Passionate Politics》，2000 年。 [出版社书籍介绍](https://www.routledge.com/Feminism-Is-for-Everybody/Hooks/p/book/9781138821620)
+
+[^2]: bell hooks：《Feminist Theory: From Margin to Center》，South End Press，2000 年。 [书籍介绍](https://www.plutobooks.com/product/feminist-theory/)

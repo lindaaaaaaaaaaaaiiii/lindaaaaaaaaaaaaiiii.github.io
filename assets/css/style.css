@@ -1722,3 +1722,14 @@ body.post-page .prose>figure{width:100%;margin:36px auto 48px}
 body.post-page .article-hero__content .article-subtitle{font-size:13px;line-height:1.65}
 body.post-page .article-hero__content h1{font-size:clamp(27px,7vw,36px)}
 }
+
+/* Unified numbered endnotes with source links and return anchors. */
+body.post-page .prose>.footnotes{font-size:15px;line-height:1.95;border-top:1px solid #d9d3c8;padding-top:30px}
+body.post-page .footnotes ol{padding-left:1.8em}
+body.post-page .footnotes li{padding-left:.4em;margin-bottom:1.5em}
+body.post-page .footnotes li::marker{color:#986b55}
+body.post-page .footnotes p{margin:0}
+body.post-page .footnotes a{overflow-wrap:anywhere}
+body.post-page .footnotes .reversefootnote{margin-left:.35em;text-decoration:none}
+body.post-page sup[id^="fnref"],body.post-page .footnotes li{scroll-margin-top:32px}
+@media(max-width:700px){body.post-page .prose>.footnotes{font-size:13px;line-height:1.9}}
