@@ -2,6 +2,8 @@
 title: '“女性友好”如何成为一个不需要借口的理由'
 date: 2026-11-17T00:00:00+08:00
 author: Ning
+cover: /assets/uploads/women-friendly-editorial-cover.webp
+cover_caption: "身体经验、日常需求与自主选择 · AI 生成插画"
 category_group: 研究与实践
 subcategory: 消费与市场
 permalink: /research/women-friendly-consumption/
