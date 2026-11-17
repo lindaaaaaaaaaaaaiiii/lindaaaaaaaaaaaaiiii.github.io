@@ -15,6 +15,9 @@ tags:
   - 用户体验
 ---
 
+<div class="visual-story-marker" hidden></div>
+
+
 走进任何一家户外用品店，挑选一只登山包，人们的目光总会习惯性地落在吊牌上：容量、自重、面料、防水性能以及价格。冰冷、精确的参数构成工业时代最标准的衡量体系。
 
 然而，当背包真正被塞满、上肩，走进风里和坡道上，参数之外的隐秘感受才开始苏醒：肩带会不会压迫胸部？背长是否合适？腰带究竟在分担重量，还是只起到了装饰作用？
@@ -55,12 +58,14 @@ tags:
 
 ### 身体：让差异进入设计
 
+
+
+品牌宣传中的女性，常常有鲜明的、美好的形象：美丽、独立、自信、勇敢，或者始终能够从容应对生活。但真实的女性，也会被不合脚的鞋磨破脚跟，被不合适的肩带勒痛。这些细节很少具有宣言式的感染力，却切实决定了一个人如何使用一件产品、评价一项服务。当品牌试图理解女性时，需要把目光放到这些细微、真实的身体与生活经验中。
+
 <figure class="article-inline-illustration" style="margin:32px 0 36px">
   <img src="/assets/uploads/women-fit.webp" alt="女性调整背包肩带与腰带，并检查跑鞋的贴合度" width="1983" height="793" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;max-height:none;object-fit:contain">
   <figcaption style="font-size:12px;line-height:1.8;text-align:center;color:#77736d;margin-top:10px">主题插画 · 让身体经验进入产品设计。</figcaption>
 </figure>
-
-品牌宣传中的女性，常常有鲜明的、美好的形象：美丽、独立、自信、勇敢，或者始终能够从容应对生活。但真实的女性，也会被不合脚的鞋磨破脚跟，被不合适的肩带勒痛。这些细节很少具有宣言式的感染力，却切实决定了一个人如何使用一件产品、评价一项服务。当品牌试图理解女性时，需要把目光放到这些细微、真实的身体与生活经验中。
 
 2022 年，运动品牌Lululemon 推出了首个鞋履系列，提出“Made for Women First”的理念，将女性脚型作为这一新品类的设计起点。[^8]这句口号的背后，其实直指一个长期被运动工业忽视、却早已被科学证实的盲区：女性的脚，难道仅仅是男性脚的等比例缩小版吗？
 
@@ -76,12 +81,14 @@ tags:
 
 ### 处境：让服务进入真实的需求场景
 
+
+
+如果说身体构造是静态起点，那么生活处境就是流动的现场。有些需求潜伏在日复一日的长期使用中，有些则来之突然。
+
 <figure class="article-inline-illustration" style="margin:32px 0 36px">
   <img src="/assets/uploads/women-service.webp" alt="女性在公共空间获取应急卫生用品的主题插画" width="1983" height="793" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;max-height:none;object-fit:contain">
   <figcaption style="font-size:12px;line-height:1.8;text-align:center;color:#77736d;margin-top:10px">主题插画 · 让支持出现在真正需要的地方。</figcaption>
 </figure>
-
-如果说身体构造是静态起点，那么生活处境就是流动的现场。有些需求潜伏在日复一日的长期使用中，有些则来之突然。
 
 在公共与商业空间中，“随处可取的卫生巾”便是一个极具代表性的真实需求。从前些年“高铁上是否应该售卖卫生巾”的全网热议，到如今越来越多的商场、机场与写字楼开始探索提供应急生理用品，这一系列公共讨论共同指向了一个问题：女性在日常生活与出行中的正常生理需求，究竟有没有被郑重地纳入现代服务设计的考量之中？[^12]
 
@@ -93,12 +100,14 @@ tags:
 
 ### 声音：让使用者参与需求定义
 
+
+
+当身体差异真正进入了设计图纸，生活处境也淌入日常服务后，这些女性的需求，究竟该由谁来定义？
+
 <figure class="article-inline-illustration" style="margin:32px 0 36px">
   <img src="/assets/uploads/women-voice.webp" alt="不同年龄的女性交流产品体验，设计者记录反馈" width="1983" height="793" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;max-height:none;object-fit:contain">
   <figcaption style="font-size:12px;line-height:1.8;text-align:center;color:#77736d;margin-top:10px">主题插画 · 让使用者的声音进入下一次改进。</figcaption>
 </figure>
-
-当身体差异真正进入了设计图纸，生活处境也淌入日常服务后，这些女性的需求，究竟该由谁来定义？
 
 在传统的商业逻辑里，品牌习惯了依靠市场调研、宏观的消费数据以及闭门造车式的用户画像去“揣测”女性。然而，活生生的使用者，永远比“将人作为工具而获得的数据画像”更复杂、也更有发言权。“我觉得这里不舒服”“这个设计在实际使用中并不方便”“我不想要这种模式”——这些发自真实体验的异议与纠偏，才是让品牌理解得以深入下去的真正起点。
 
@@ -149,3 +158,44 @@ tags:
 [^13]: 上海迪士尼度假区：《上海迪士尼度假区与护舒宝宣布达成战略联盟》，美通社发布，2026 年9 月21 日。 [查看来源](https://www.prnasia.com/story/548808-1.shtml)
 
 [^14]: Brandstar：《奈丝公主：一场来自1825 条用户声音的发布会》，品牌星球，2025 年6 月2 日。 [查看来源](https://www.brandstar.com.cn/articles/source-7590/)
+
+<style>
+/* Immersive editorial story, scoped to this article. */
+body.post-page:has(.visual-story-marker){background:#f5f3ed!important}
+body.post-page:has(.visual-story-marker) .site-main{max-width:none;padding:0;background:#f5f3ed!important}
+body.post-page:has(.visual-story-marker) .article{max-width:none;width:100%;padding:0 0 80px}
+body.post-page:has(.visual-story-marker) .back-link{display:block;width:fit-content;margin:24px 4vw}
+body.post-page:has(.visual-story-marker) .article-hero{width:100%;height:88svh;min-height:620px;max-height:1080px;margin:0 0 110px;overflow:visible}
+body.post-page:has(.visual-story-marker) .article-hero__media{overflow:hidden}
+body.post-page:has(.visual-story-marker) .article-hero__image{transform:none;object-position:center}
+body.post-page:has(.visual-story-marker) .article-hero__shade{background:linear-gradient(180deg,rgba(15,20,16,.18),rgba(15,20,16,.5) 50%,rgba(15,20,16,.65))}
+body.post-page:has(.visual-story-marker) .article-hero__content{left:50%;right:auto;top:50%;bottom:auto;width:min(1040px,88%);max-width:none;transform:translate(-50%,-50%);text-align:center}
+body.post-page:has(.visual-story-marker) .article-hero__content h1{max-width:100%;font:600 clamp(38px,5.3vw,78px)/1.42 "Noto Serif SC",serif;letter-spacing:.015em;text-wrap:balance}
+body.post-page:has(.visual-story-marker) .article-hero__content .eyebrow{letter-spacing:.25em;margin-bottom:34px}
+body.post-page:has(.visual-story-marker) .article-hero__content .article-meta{margin-top:34px}
+body.post-page:has(.visual-story-marker) .article-hero__caption{bottom:-52px;min-height:52px;justify-content:flex-start;padding:12px 4vw;background:transparent;color:#736d62;text-align:left;font-size:12px;backdrop-filter:none}
+body.post-page:has(.visual-story-marker) .article-hero__caption span{height:18px;background:#ad923f}
+body.post-page:has(.visual-story-marker) .prose{width:100%;max-width:none;font-size:18px;line-height:2.05;letter-spacing:.025em}
+body.post-page:has(.visual-story-marker) .prose>p,
+body.post-page:has(.visual-story-marker) .prose>h2,
+body.post-page:has(.visual-story-marker) .prose>h3,
+body.post-page:has(.visual-story-marker) .prose>.footnotes{width:min(720px,calc(100% - 48px));margin-left:auto;margin-right:auto}
+body.post-page:has(.visual-story-marker) .prose>p{margin-top:0;margin-bottom:1.65em}
+body.post-page:has(.visual-story-marker) .prose>h2{margin-top:100px;margin-bottom:34px;font-size:30px;line-height:1.6}
+body.post-page:has(.visual-story-marker) .prose>h3{margin-top:60px;margin-bottom:28px;font-size:24px;line-height:1.6}
+body.post-page:has(.visual-story-marker) .article-inline-illustration{width:min(1440px,calc(100% - 64px));max-width:none;margin:64px auto 76px!important;padding:0}
+body.post-page:has(.visual-story-marker) .article-inline-illustration img{width:100%;height:auto;max-height:none;border-radius:0}
+body.post-page:has(.visual-story-marker) .article-inline-illustration figcaption{text-align:left!important;font-size:13px!important;padding:4px 0 4px 14px;border-left:3px solid #c2a24b;margin-top:16px!important}
+body.post-page:has(.visual-story-marker) .tag-row,
+body.post-page:has(.visual-story-marker) .article-end{width:min(720px,calc(100% - 48px));margin-left:auto;margin-right:auto}
+body.post-page:has(.visual-story-marker) .footnotes{font-size:13px;line-height:1.9;overflow-wrap:anywhere;border-top:1px solid #d9d3c8;padding-top:24px}
+@media(max-width:700px){
+body.post-page:has(.visual-story-marker) .article-hero{height:74svh;min-height:480px;margin:0 0 85px}
+body.post-page:has(.visual-story-marker) .article-hero__content h1{font-size:36px;line-height:1.5}
+body.post-page:has(.visual-story-marker) .prose{font-size:16px;line-height:2}
+body.post-page:has(.visual-story-marker) .prose>h2{margin-top:64px;font-size:25px}
+body.post-page:has(.visual-story-marker) .prose>h3{font-size:21px}
+body.post-page:has(.visual-story-marker) .article-inline-illustration{width:100%;margin:36px auto 48px!important}
+body.post-page:has(.visual-story-marker) .article-inline-illustration figcaption{margin:14px 24px 0!important}
+}
+</style>
