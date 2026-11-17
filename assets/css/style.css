@@ -1733,3 +1733,64 @@ body.post-page .footnotes a{overflow-wrap:anywhere}
 body.post-page .footnotes .reversefootnote{margin-left:.35em;text-decoration:none}
 body.post-page sup[id^="fnref"],body.post-page .footnotes li{scroll-margin-top:32px}
 @media(max-width:700px){body.post-page .prose>.footnotes{font-size:13px;line-height:1.9}}
+
+/* Responsive hero containment: normal-flow title cannot escape the cover. */
+body.post-page .site-main,
+body.post-page .article{width:100%;min-width:0}
+body.post-page .article-hero{
+  display:grid;
+  place-items:center;
+  width:100%;
+  height:auto;
+  min-height:min(82svh,900px);
+  max-height:none;
+  margin:0 0 80px;
+  padding:clamp(64px,9vh,120px) clamp(24px,6vw,96px);
+  overflow:hidden;
+}
+body.post-page .article-hero .article-header.article-hero__content{
+  position:relative;
+  inset:auto;
+  left:auto;right:auto;top:auto;bottom:auto;
+  transform:none!important;
+  width:100%;
+  max-width:1040px;
+  min-width:0;
+  margin:0 auto;
+  padding:0;
+  text-align:center;
+}
+body.post-page .article-hero .article-hero__content h1{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  margin:0 auto 24px;
+  font-size:clamp(30px,4.4vw,64px);
+  line-height:1.4;
+  letter-spacing:0;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  word-break:normal;
+  text-wrap:balance;
+}
+body.post-page .article-hero .article-hero__content h1 .story-title-main{font-size:1em}
+body.post-page .article-hero .article-hero__content h1 .story-title-sub{font-size:.72em;line-height:1.5;margin-top:16px}
+body.post-page .article-hero .article-hero__content .eyebrow{
+  max-width:100%;margin:0 auto 28px;line-height:1.8;overflow-wrap:anywhere;
+}
+body.post-page .article-hero .article-hero__content .article-subtitle{
+  width:100%;max-width:760px;margin:0 auto;font-size:clamp(14px,1.4vw,18px);
+  line-height:1.8;overflow-wrap:anywhere;white-space:normal;
+}
+body.post-page .article-hero .article-hero__content .article-meta{
+  max-width:100%;margin:24px auto 0;line-height:1.8;overflow-wrap:anywhere;
+}
+body.post-page .article-hero__media,
+body.post-page .article-hero__shade{position:absolute;inset:0;width:100%;height:100%}
+body.post-page .article-hero__image{width:100%;height:100%;max-height:none;margin:0;transform:none!important;object-fit:cover}
+@media(max-width:700px){
+  body.post-page .article-hero{min-height:70svh;padding:56px 24px;margin-bottom:56px}
+  body.post-page .article-hero .article-hero__content h1{font-size:clamp(27px,7vw,38px);line-height:1.5}
+  body.post-page .article-hero .article-hero__content .eyebrow{font-size:9px;letter-spacing:.13em;margin-bottom:22px}
+  body.post-page .article-hero .article-hero__content .article-subtitle{font-size:13px;line-height:1.75}
+}
