@@ -199,3 +199,19 @@ body.post-page:has(.visual-story-marker) .article-inline-illustration{width:100%
 body.post-page:has(.visual-story-marker) .article-inline-illustration figcaption{margin:14px 24px 0!important}
 }
 </style>
+
+<style>
+body.post-page:has(.visual-story-marker) .article-hero__content h1 .story-title-main{display:block;font-size:1.25em}
+body.post-page:has(.visual-story-marker) .article-hero__content h1 .story-title-sub{display:block;font-size:.65em;margin-top:20px;letter-spacing:.02em}
+@media(max-width:700px){body.post-page:has(.visual-story-marker) .article-hero__content h1 .story-title-sub{font-size:.72em;line-height:1.6}}
+</style>
+<script>
+(function(){
+var heading=document.querySelector('.article-hero__content h1');
+if(!heading)return;
+var main=document.createElement('span'),sub=document.createElement('span');
+main.className='story-title-main';main.textContent='“女性友好”，';
+sub.className='story-title-sub';sub.textContent='如何成为一个购买理由';
+heading.replaceChildren(main,sub);
+})();
+</script>
