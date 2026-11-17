@@ -15,9 +15,6 @@ layout: default
       {% if page.subtitle %}<p class="article-subtitle">{{ page.subtitle }}</p>{% endif %}
       <div class="article-meta">{{ page.date | date: "%Y.%m.%d" }}{% if page.author %} · {{ page.author }}{% endif %}</div>
     </header>
-    {% if page.cover_caption %}
-    <div class="article-hero__caption"><span aria-hidden="true"></span>{{ page.cover_caption }}</div>
-    {% endif %}
   </section>
   {% else %}
   <header class="article-header article-header--standalone">

@@ -1654,3 +1654,71 @@ body.section-page .site-footer::before{
 @media(max-width:600px){
   body.section-page{background-size:800px 553px;background-position:center 120px}
 }
+
+/* Shared immersive article layout */
+
+/* Immersive editorial story, scoped to this article. */
+body.post-page{background:#f5f3ed!important}
+body.post-page .site-main{max-width:none;padding:0;background:#f5f3ed!important}
+body.post-page .article{max-width:none;width:100%;padding:0 0 80px}
+body.post-page .back-link{display:block;width:fit-content;margin:24px 4vw}
+body.post-page .article-hero{width:100%;height:88svh;min-height:620px;max-height:1080px;margin:0 0 110px;overflow:visible}
+body.post-page .article-hero__media{overflow:hidden}
+body.post-page .article-hero__image{transform:none;object-position:center}
+body.post-page .article-hero__shade{background:linear-gradient(180deg,rgba(15,20,16,.18),rgba(15,20,16,.5) 50%,rgba(15,20,16,.65))}
+body.post-page .article-hero__content{left:50%;right:auto;top:50%;bottom:auto;width:min(1040px,88%);max-width:none;transform:translate(-50%,-50%);text-align:center}
+body.post-page .article-hero__content h1{max-width:100%;font:600 clamp(38px,5.3vw,78px)/1.42 "Noto Serif SC",serif;letter-spacing:.015em;text-wrap:balance}
+body.post-page .article-hero__content .eyebrow{letter-spacing:.25em;margin-bottom:34px}
+body.post-page .article-hero__content .article-meta{margin-top:34px}
+body.post-page .article-hero__caption{bottom:-52px;min-height:52px;justify-content:flex-start;padding:12px 4vw;background:transparent;color:#736d62;text-align:left;font-size:12px;backdrop-filter:none}
+body.post-page .article-hero__caption span{height:18px;background:#ad923f}
+body.post-page .prose{width:100%;max-width:none;font-size:18px;line-height:2.05;letter-spacing:.025em}
+body.post-page .prose>p,
+body.post-page .prose>h2,
+body.post-page .prose>h3,
+body.post-page .prose>.footnotes{width:min(720px,calc(100% - 48px));margin-left:auto;margin-right:auto}
+body.post-page .prose>p{margin-top:0;margin-bottom:1.65em}
+body.post-page .prose>h2{margin-top:100px;margin-bottom:34px;font-size:30px;line-height:1.6}
+body.post-page .prose>h3{margin-top:60px;margin-bottom:28px;font-size:24px;line-height:1.6}
+body.post-page .article-inline-illustration{width:min(1440px,calc(100% - 64px));max-width:none;margin:64px auto 76px!important;padding:0}
+body.post-page .article-inline-illustration img{width:100%;height:auto;max-height:none;border-radius:0}
+body.post-page .article-inline-illustration figcaption{text-align:left!important;font-size:13px!important;padding:4px 0 4px 14px;border-left:3px solid #c2a24b;margin-top:16px!important}
+body.post-page .tag-row,
+body.post-page .article-end{width:min(720px,calc(100% - 48px));margin-left:auto;margin-right:auto}
+body.post-page .footnotes{font-size:13px;line-height:1.9;overflow-wrap:anywhere;border-top:1px solid #d9d3c8;padding-top:24px}
+@media(max-width:700px){
+body.post-page .article-hero{height:74svh;min-height:480px;margin:0 0 85px}
+body.post-page .article-hero__content h1{font-size:36px;line-height:1.5}
+body.post-page .prose{font-size:16px;line-height:2}
+body.post-page .prose>h2{margin-top:64px;font-size:25px}
+body.post-page .prose>h3{font-size:21px}
+body.post-page .article-inline-illustration{width:100%;margin:36px auto 48px!important}
+body.post-page .article-inline-illustration figcaption{margin:14px 24px 0!important}
+}
+
+
+body.post-page .article-hero__content h1 .story-title-main{display:block;font-size:1.25em}
+body.post-page .article-hero__content h1 .story-title-sub{display:block;font-size:.65em;margin-top:20px;letter-spacing:.02em}
+@media(max-width:700px){body.post-page .article-hero__content h1 .story-title-sub{font-size:.72em;line-height:1.6}}
+
+/* Consistent full-width illustration rhythm for every article. */
+body.post-page .prose>figure{width:min(1440px,calc(100% - 64px));max-width:none;margin:64px auto 76px}
+body.post-page .prose>figure img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+body.post-page .article-inline-illustration figcaption,
+body.post-page .article-hero__caption{display:none}
+body.post-page .article-hero{margin-bottom:80px}
+body.post-page .article-header--standalone{width:min(1000px,calc(100% - 48px));margin:0 auto 70px;text-align:center;padding-top:70px}
+body.post-page .article-header--standalone h1{font-size:clamp(36px,5vw,64px);line-height:1.5;text-wrap:balance}
+body.post-page .prose>blockquote,
+body.post-page .prose>ul,
+body.post-page .prose>ol,
+body.post-page .prose>hr,
+body.post-page .prose>table,
+body.post-page .prose>pre{width:min(720px,calc(100% - 48px));margin-left:auto;margin-right:auto}
+body.post-page .prose>.footnotes{box-sizing:border-box}
+body.post-page .article-hero__content .article-subtitle{margin-left:auto;margin-right:auto;max-width:760px}
+@media(max-width:700px){
+body.post-page .prose>figure{width:100%;margin:36px auto 48px}
+body.post-page .article-hero__content .article-subtitle{font-size:13px;line-height:1.65}
+body.post-page .article-hero__content h1{font-size:clamp(27px,7vw,36px)}
+}
