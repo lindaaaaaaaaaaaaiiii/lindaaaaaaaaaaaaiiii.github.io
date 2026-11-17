@@ -16,8 +16,10 @@ permalink: /research/
   {% include post-list.html posts=posts %}
 </section>
 <section class="taxonomy" id="market">
-  <p class="eyebrow">02 / MARKET RESEARCH</p><h2>市场研究</h2>
+  <p class="eyebrow">02 / CONSUMPTION & MARKETS</p><h2>消费与市场</h2>
   <p>消费者访谈、用户需求、市场观察与品牌体验研究。</p>
-  {% assign posts = site.posts | where: "subcategory", "市场研究" %}
+  {% assign current_market_posts = site.posts | where: "subcategory", "消费与市场" %}
+  {% assign legacy_market_posts = site.posts | where: "subcategory", "消费与市场" %}
+  {% assign posts = current_market_posts | concat: legacy_market_posts | sort: "date" | reverse %}
   {% include post-list.html posts=posts %}
 </section>
