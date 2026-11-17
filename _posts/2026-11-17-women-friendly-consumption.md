@@ -55,6 +55,11 @@ tags:
 
 ### 身体：让差异进入设计
 
+<figure class="article-inline-illustration" style="margin:32px 0 36px">
+  <img src="/assets/uploads/women-fit.webp" alt="女性调整背包肩带与腰带，并检查跑鞋的贴合度" width="1983" height="793" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;max-height:none;object-fit:contain">
+  <figcaption style="font-size:12px;line-height:1.8;text-align:center;color:#77736d;margin-top:10px">主题插画 · 让身体经验进入产品设计。</figcaption>
+</figure>
+
 品牌宣传中的女性，常常有鲜明的、美好的形象：美丽、独立、自信、勇敢，或者始终能够从容应对生活。但真实的女性，也会被不合脚的鞋磨破脚跟，被不合适的肩带勒痛。这些细节很少具有宣言式的感染力，却切实决定了一个人如何使用一件产品、评价一项服务。当品牌试图理解女性时，需要把目光放到这些细微、真实的身体与生活经验中。
 
 2022 年，运动品牌Lululemon 推出了首个鞋履系列，提出“Made for Women First”的理念，将女性脚型作为这一新品类的设计起点。[^8]这句口号的背后，其实直指一个长期被运动工业忽视、却早已被科学证实的盲区：女性的脚，难道仅仅是男性脚的等比例缩小版吗？
@@ -71,6 +76,11 @@ tags:
 
 ### 处境：让服务进入真实的需求场景
 
+<figure class="article-inline-illustration" style="margin:32px 0 36px">
+  <img src="/assets/uploads/women-service.webp" alt="女性在公共空间获取应急卫生用品的主题插画" width="1983" height="793" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;max-height:none;object-fit:contain">
+  <figcaption style="font-size:12px;line-height:1.8;text-align:center;color:#77736d;margin-top:10px">主题插画 · 让支持出现在真正需要的地方。</figcaption>
+</figure>
+
 如果说身体构造是静态起点，那么生活处境就是流动的现场。有些需求潜伏在日复一日的长期使用中，有些则来之突然。
 
 在公共与商业空间中，“随处可取的卫生巾”便是一个极具代表性的真实需求。从前些年“高铁上是否应该售卖卫生巾”的全网热议，到如今越来越多的商场、机场与写字楼开始探索提供应急生理用品，这一系列公共讨论共同指向了一个问题：女性在日常生活与出行中的正常生理需求，究竟有没有被郑重地纳入现代服务设计的考量之中？[^12]
@@ -82,6 +92,11 @@ tags:
 这也让“看到真实的女性”有了具体的落点。品牌需要理解的，是每一个正在乘车、购物或游玩的普通人，以及她此刻在经历的微小困境。将经期需求纳入日常服务，意味着承认女性的身体经验本就属于这些生活场景，值得被常规、持续、非猎奇的回应。
 
 ### 声音：让使用者参与需求定义
+
+<figure class="article-inline-illustration" style="margin:32px 0 36px">
+  <img src="/assets/uploads/women-voice.webp" alt="不同年龄的女性交流产品体验，设计者记录反馈" width="1983" height="793" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;max-height:none;object-fit:contain">
+  <figcaption style="font-size:12px;line-height:1.8;text-align:center;color:#77736d;margin-top:10px">主题插画 · 让使用者的声音进入下一次改进。</figcaption>
+</figure>
 
 当身体差异真正进入了设计图纸，生活处境也淌入日常服务后，这些女性的需求，究竟该由谁来定义？
 
