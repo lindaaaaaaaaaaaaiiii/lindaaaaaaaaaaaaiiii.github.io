@@ -49,30 +49,30 @@ tags:
 
 ## 注释与参考资料
 
-[^1]: undefined
+[^1]: Genevro, Janice L., Tracy Marshall, Tess Miller, and Center for the Advancement of Health. 2004. ‘Report on Bereavement and Grief Research’. Death Studies 28 (6): 491–575. [查看来源](https://doi.org/10.1080/07481180490461188)
 
-[^2]: undefined
+[^2]: DeSpelder, Lynne Ann. 2005. The Last Dance: Encountering Death and Dying. With Internet Archive. Boston: McGraw-Hill. [查看来源](http://archive.org/details/the-last-dance--encountering-death-and-dying-_2005)
 
-[^3]: undefined
+[^3]: Cressy, David. 1997. Birth, Marriage, and Death: Ritual, Religion, and the Life-Cycle in Tudor and Stuart England. With Internet Archive. Oxford \[England]; New York: Oxford University Press. [查看来源](http://archive.org/details/birthmarriagedea0000cres)
 
-[^4]: undefined
+[^4]: Laurence, Anne. 1989. ‘Godly Grief: Individual Responses to Death in Seventeenth-Century Britain’. In Death, Ritual, and Bereavement. Routledge. 
 
-[^5]: undefined
+[^5]: Freud, S. 1922. ‘Mourning and Melancholia’. The Journal of Nervous and Mental Disease 56 (5): 543. [查看来源](https://journals.lww.com/jonmd/citation/1922/11000/Mourning_and_Melancholia.66.aspx)
 
-[^6]: undefined
+[^6]: Granek, Leeat. 2010. ‘Grief as Pathology: The Evolution of Grief Theory in Psychology from Freud to the Present.’ History of Psychology 13 (1): 46–73. [查看来源](https://doi.org/10.1037/a0016991)
 
-[^7]: undefined
+[^7]: Freud, Sigmund. 2003. The Sigmund Freud-Ludwig Binswanger Correspondence 1908-1938. Other Press. 
 
 [^8]: Bonanno, George A. 2019. The Other Side of Sadness: What the New Science of Bereavement Tells Us about Life After Loss. Basic Books. 
 
-[^9]: undefined
+[^9]: Lenferink, L. I. M., E. Terbrack, J. H. W. van Eersel, M. Zuidersma, M. Franzen, and H. Riese. 2024. ‘Fluctuations of Prolonged Grief Disorder Reactions in the Daily Life of Bereaved People: An Experience Sampling Study’. Current Psychology 43 (47): 35821–32. [查看来源](https://doi.org/10.1007/s12144-024-06987-2)
 
-[^10]: undefined
+[^10]: Kleinman, Arthur. 1988. The Illness Narratives: Suffering, Healing, And The Human Condition. Basic Books. 
 
-[^11]: undefined
+[^11]: Killikelly, Clare, Anna Hasenöhrl, Eva-Maria Stelzer, and Andreas Maercker. 2023. ‘The New ICD-11 Prolonged Grief Disorder Guidelines in Japan: Findings and Implications from Key Informant Interviews’. Culture, Medicine, and Psychiatry 47 (2): 519–42. [查看来源](https://doi.org/10.1007/s11013-022-09781-6)
 
-[^12]: undefined
+[^12]: Klass, Dennis, Phyllis R. Silverman, and Steven Nickman, eds. 1996. Continuing Bonds: New Understandings of Grief. Taylor & Francis. [查看来源](https://doi.org/10.4324/9781315800790)
 
-[^13]: undefined
+[^13]: Bonanno, George, Anthony Papa, Kathleen Lalande, Nanping Zhang, and Jennie Noll. 2005. ‘Grief Processing and Deliberate Grief Avoidance: A Prospective Comparison of Bereaved Spouses and Parents in the United States and the People’s Republic of China’. Journal of Consulting and Clinical Psychology 73 (February): 86–98. [查看来源](https://doi.org/10.1037/0022-006X.73.1.86)
 
-[^14]: undefined
+[^14]: 李昀鋆. (2025). 与哀伤共处：经历父母离世的年轻子女. 广东人民出版社. 
