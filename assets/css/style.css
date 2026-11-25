@@ -2087,3 +2087,73 @@ body.post-page .article--reading .prose > .policy-scroll {
   }
   .policy-scroll.is-enhanced .policy-scroll__step > .policy-scroll__scene { display: none; }
 }
+
+/* Let illustrated chapter breaks occupy one viewport in the reading layout. */
+body.post-page .article--reading .prose > .reading-chapter--collage {
+  padding: 0;
+}
+body.post-page .article--reading .reading-chapter--collage .reading-chapter__frame {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+}
+body.post-page .article--reading .reading-chapter--collage .reading-chapter__frame img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-width: none;
+  margin: 0;
+  object-fit: cover;
+}
+body.post-page .article--reading .reading-chapter--collage .reading-chapter__frame::after {
+  display: block;
+  height: 48%;
+  background: linear-gradient(to bottom, rgba(24, 13, 25, .87), rgba(24, 13, 25, .58) 50%, transparent);
+}
+body.post-page .article--reading .reading-chapter--collage .reading-chapter__title {
+  grid-area: 1 / 1;
+  justify-self: center;
+  max-width: 28ch;
+  margin: 0;
+  padding: max(92px, 12vh) clamp(20px, 6vw, 88px) 0;
+  font-size: clamp(1.9rem, 4.4vw, 4.5rem);
+}
+
+/* A soft extension fills portrait screens while the whole collage stays in view. */
+@media (orientation: portrait) {
+  .reading-chapter--collage[aria-labelledby="什么样的价值冲突会形成道德政治"] {
+    --chapter-art: url("../uploads/morality-politics-value-conflicts-collage.webp");
+  }
+  .reading-chapter--collage[aria-labelledby="道德政策有哪些可观察的特征"] {
+    --chapter-art: url("../uploads/morality-politics-observable-features-collage.webp");
+  }
+  .reading-chapter--collage[aria-labelledby="policy-effects"] {
+    --chapter-art: url("../uploads/morality-politics-policymaking-collage.webp");
+  }
+  body.post-page .article--reading .reading-chapter--collage .reading-chapter__frame::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -24px;
+    background: var(--chapter-art, none) center / cover no-repeat;
+    filter: blur(22px) brightness(.58);
+  }
+  body.post-page .article--reading .reading-chapter--collage .reading-chapter__frame img {
+    object-fit: contain;
+  }
+  body.post-page .article--reading .reading-chapter--collage .reading-chapter__frame::after {
+    height: 36%;
+  }
+  body.post-page .article--reading .reading-chapter--collage .reading-chapter__title {
+    align-self: center;
+    transform: translateY(-31svh);
+    padding-block: 0;
+    font-size: clamp(1.65rem, 5vw, 3.2rem);
+  }
+}
