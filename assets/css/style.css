@@ -1799,7 +1799,7 @@ body.post-page .article-hero__image{width:100%;height:100%;max-height:none;margi
 body.post-page .article--reading {
   --reading-column: min(600px, calc(100% - 40px));
   --reading-figure: min(520px, calc(100% - 56px));
-  --reading-cover: min(800px, calc(100% - 40px));
+  --reading-cover: min(960px, calc(100% - 40px));
   --reading-paper: #f5f3ed;
 }
 body.post-page .article--reading .article-hero {
@@ -1882,4 +1882,66 @@ body.post-page .article--reading .prose > p:first-of-type::first-letter {
 @keyframes reading-cover-fade {
   from { opacity: 1; }
   to { opacity: .74; }
+}
+
+/* Full-width chapter artwork inside the narrow reading layout. */
+body.post-page .article--reading .prose > .reading-chapter {
+  --chapter-paper: #302822;
+  margin: clamp(44px, 8vw, 90px) 0;
+  padding: clamp(32px, 7vw, 96px) 0 clamp(30px, 5vw, 72px);
+  background: var(--chapter-paper);
+}
+body.post-page .article--reading .prose > .reading-chapter--implementation {
+  --chapter-paper: #293437;
+}
+body.post-page .article--reading .reading-chapter__frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: min(900px, calc(100% - 48px));
+  margin-inline: auto;
+}
+body.post-page .article--reading .reading-chapter__frame img {
+  display: block;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+body.post-page .article--reading .reading-chapter__frame::after {
+  content: "";
+  grid-area: 1 / 1;
+  align-self: start;
+  width: 100%;
+  height: min(128px, 32%);
+  background: linear-gradient(to bottom, rgba(18, 16, 15, .56), transparent);
+  pointer-events: none;
+}
+body.post-page .article--reading .prose .reading-chapter__title {
+  grid-area: 1 / 1;
+  align-self: start;
+  z-index: 1;
+  margin: 0;
+  padding: clamp(12px, 2.3vw, 32px) 12px 0;
+  color: #fff;
+  font-size: clamp(23px, 3.4vw, 44px);
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .8);
+  text-wrap: balance;
+}
+@media (max-width: 560px) {
+  body.post-page .article--reading .reading-chapter__frame {
+    width: calc(100% - 32px);
+  }
+  body.post-page .article--reading .prose .reading-chapter__title {
+    grid-area: 1 / 1;
+    padding: 0 0 18px;
+  }
+  body.post-page .article--reading .reading-chapter__frame img {
+    grid-area: 2 / 1;
+  }
+  body.post-page .article--reading .reading-chapter__frame::after {
+    display: none;
+  }
 }
