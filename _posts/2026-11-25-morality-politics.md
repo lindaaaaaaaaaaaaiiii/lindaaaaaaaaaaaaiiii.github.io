@@ -1,19 +1,19 @@
 ---
-title: 什么是“道德政治”
-subtitle: Morality Politics
-date: '2026-11-25T00:00:00+08:00'
+article_style: reading
 author: Ning
+permalink: /research/morality-politics/
+title: 何为“道德政治”
+subtitle: Morality Politics
+date: 2026-11-25T00:00:00+08:00
+immersive_cover: true
 category_group: 研究与实践
 subcategory: 社会与公共议题研究
-permalink: /research/morality-politics/
 description: 从荷兰与法国的性交易政策出发，讨论道德判断如何进入社会政策，以及它怎样影响证据、问题界定与政策执行。
-tags:
-- 道德政治
-- 社会政策
-- 性交易政策
 cover: /assets/uploads/morality-politics-megaphone-cover.webp
-article_style: reading
-immersive_cover: true
+tags:
+  - 道德政治
+  - 社会政策
+  - 性交易政策
 policy_scroll: true
 ---
 
