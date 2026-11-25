@@ -12,6 +12,7 @@ tags:
 - 社会政策
 - 性交易政策
 cover: /assets/uploads/morality-politics-cover.webp
+article_style: reading
 ---
 
 ***在这一系列中，我将探讨道德政治、社会政策以及与常见的“道德评判”所挂钩的社会议题之间的联系。第一篇将首先讨论Wagenaar笔下的“道德政治”为何。***

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="article">
+<article class="article{% if page.article_style == 'reading' %} article--reading{% endif %}">
   <a class="back-link" href="{{ '/archive/' | relative_url }}" onclick="if (window.history.length > 1) { window.history.back(); return false; }"><span class="button-copy"><span class="button-zh">← 返回上一层</span><span class="button-en">BACK TO PREVIOUS PAGE</span></span></a>
   {% if page.cover %}
   <section class="article-hero" data-article-parallax aria-label="{{ page.title | escape }}">
