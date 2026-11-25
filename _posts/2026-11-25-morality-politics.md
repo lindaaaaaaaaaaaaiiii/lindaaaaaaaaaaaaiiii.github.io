@@ -25,7 +25,12 @@ article_style: reading
 
 我一直对那些容易引起道德评判的社会议题感兴趣，尤其想知道，这些评判是怎样进入、影响社会政策的。一旦政府需要立法、发放许可、提供服务或开展检查，关于错的争论就会演变为一连串具体的决定：谁是问题？谁需要被保护？谁应该收到约束？哪些人的经验值得听取？受到Wagenaar研究的启发，本文企图沿着这些“morality politics”这一定义去理解道德判断怎样影响制度，又怎样通过制度改变当事人的生活。因此第一篇先从一个基本问题谈起：他们所说的“道德政治”究竟是什么？
 
-## 什么样的价值冲突会形成道德政治？
+<section class="reading-chapter" aria-labelledby="什么样的价值冲突会形成道德政治">
+  <div class="reading-chapter__frame">
+    <h2 class="reading-chapter__title" id="什么样的价值冲突会形成道德政治">什么样的价值冲突会形成道德政治？</h2>
+    <img src="/assets/uploads/morality-politics-value-conflicts.png" alt="雨夜街景和玻璃倒影中叠映超声照片、亮着红灯的橱窗，以及婚戒和彩虹缎带，分别象征代孕、性交易与同性婚姻。" width="1672" height="941" loading="lazy" decoding="async">
+  </div>
+</section>
 
 堕胎、代孕、安乐死、同性婚姻、性交易等，经常出现在道德政治研究或大众激烈讨论的议题中。它们往往牵扯到人类对于身体、生命、家庭和性的一些基本信念。但按照议题来逐一讨论，很难解释实际发生的事情，因为基于文化差异性，同一个议题可能在一个国家长期引发激烈冲突（如宗教），但在另一个国家却已经形成了可以维持的务实安排。反言之，医疗、教育或税收也可能因为人们对自由、平等和团结的不同理解，进而成为政治争论的中心。[^7]如果几乎所有的社会政策都涉及价值选择，我们就需要进一步问：这些价值冲突对政策过程产生了什么影响？
 
@@ -33,7 +38,12 @@ article_style: reading
 
 与此同时，Wagenaar与Altink也在研究中交代了自己对于性工作的价值立场：好的性政策应该保障性工作者的人权与劳动权利，并减少对社区的不利影响。[^9]这实际上为政策的后续评估提出了基本要求：政府如果声称一项措施可以保障安全，就要说明保障的是谁的安全，以及怎样判断安全是否有所改善。
 
-## “道德政策”有哪些可观察的特征？
+<section class="reading-chapter" aria-labelledby="道德政策有哪些可观察的特征">
+  <div class="reading-chapter__frame">
+    <h2 class="reading-chapter__title" id="道德政策有哪些可观察的特征">“道德政策”有哪些可观察的特征？</h2>
+    <img src="/assets/uploads/morality-politics-observable-features.png" alt="放大镜压在带有批注的纸页上，旁边放着钢笔、铅笔和笔记本。" width="1672" height="941" loading="lazy" decoding="async">
+  </div>
+</section>
 
 Wagenaar为“morality policy”归纳了六项特征。[^10]
 
@@ -63,12 +73,14 @@ Wagenaar为“morality policy”归纳了六项特征。[^10]
 
 此处的“change”指的是政策改变了原有的价值依据，转而采用一套截然不同的基本原则与价值观念。譬如，即使财政压力迫使政府提出大幅改革，教育、医疗和养老政策也难以快速转向与以往截然不同的内容。<strong>制度改变的阻力</strong>来自利益相关者、熟悉现行制度的专家，以及认可现行政策益处的公众。而在道德政策中，这些制度阻力却很难发挥作用。“基本的原则”依旧主导着政策过程，且当一种意识形态占据了主导地位，而人们又很少关注数据与政策的实际执行效果时，公共舆论里的道德判断风向很容易导致政策内容的突然转变。[^20]
 
-<section class="reading-chapter reading-chapter--evidence" aria-labelledby="policy-effects">
+<section class="reading-chapter" aria-labelledby="policy-effects">
   <div class="reading-chapter__frame">
     <h2 class="reading-chapter__title" id="policy-effects">道德政治怎样影响政策？</h2>
-    <img src="/assets/uploads/morality-politics-evidence.webp" alt="档案夹上叠放着统计表和研究报告，红圈圈注其中几项。" width="1500" height="844" loading="lazy" decoding="async">
+    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Lyndon_Johnson_signing_Civil_Rights_Act%2C_July_2%2C_1964.jpg/1280px-Lyndon_Johnson_signing_Civil_Rights_Act%2C_July_2%2C_1964.jpg" alt="林登·约翰逊坐在桌前签署《1964年民权法案》，马丁·路德·金等人在旁见证。" width="1280" height="857" loading="lazy" decoding="async">
   </div>
 </section>
+
+<small>1964 年 7 月 2 日，美国总统林登·约翰逊签署《民权法案》。摄影：Cecil Stoughton，白宫新闻办公室。<a href="https://commons.wikimedia.org/wiki/File:Lyndon_Johnson_signing_Civil_Rights_Act,_July_2,_1964.jpg">档案照片（公有领域）</a></small>
 
 这六项特征放在一起，可以帮助我们理解：当某种道德立场占据主导地位，政策制定者还愿不愿意用新的证据来修正对问题的判断？文章开篇的荷兰案例中，政府允许符合条件的性工作场所持牌经营。可场所拿到牌照以后，里面工作的人为什么仍然难以获得劳动保障？要回答这个问题，可以沿着 Wagenaar 与 Altink（2012）的分析，看看政策制定者怎么数人、怎么判断当事人需要什么保护，又怎么知道改革有没有起作用。
 
@@ -76,12 +88,7 @@ Wagenaar为“morality policy”归纳了六项特征。[^10]
 
 <strong>一个人需要什么保护，要看具体发生了什么。</strong> 有人因为缺少其他收入来源进入性行业，后来又被经营者克扣报酬。前一件事关乎这个人当时有哪些谋生选择，后一件事关乎经营者怎样控制其收入。如果两种处境都用“强迫”来概括，就容易漏掉决定如何介入的细节。Wagenaar 提出，可以用“剥削”来分析工作中的控制[^22]，并具体追问：当事人能拒绝顾客吗？能支配自己的收入吗？遇到克扣时，可以向谁投诉？
 
-<section class="reading-chapter reading-chapter--implementation" aria-labelledby="policy-outcomes">
-  <div class="reading-chapter__frame">
-    <h3 class="reading-chapter__title" id="policy-outcomes">牌照发下去以后，谁来检查劳动保障有没有落实？</h3>
-    <img src="/assets/uploads/morality-politics-implementation.webp" alt="公共服务窗口旁，一人带着材料走来，另一人与工作人员交谈。" width="1500" height="844" loading="lazy" decoding="async">
-  </div>
-</section>
+### 牌照发下去以后，谁来检查劳动保障有没有落实？ {#policy-outcomes}
 
 荷兰的改革给了市镇发放许可、管理场所的办法。劳动保障要落地，还涉及如何认定用工关系，以及劳动监察部门如何介入。2007 年的官方评估发现，持牌场所的劳动关系改善仍然有限。[^23]因此，评估这场改革还要问一个更具体的问题：<strong>当性工作者被克扣报酬时，有没有一个部门受理投诉、调查用工关系，并在认定存在雇佣关系后督促经营者履行义务？</strong>
 
