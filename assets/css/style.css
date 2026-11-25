@@ -1973,6 +1973,12 @@ body.post-page .article--reading .prose .reading-chapter__title {
   text-shadow: 0 2px 12px rgba(0, 0, 0, .8);
   text-wrap: balance;
 }
+@media (min-width: 561px) {
+  body.post-page .article--reading .reading-chapter--collage .reading-chapter__frame::after {
+    height: min(168px, 40%);
+    background: linear-gradient(to bottom, rgba(21, 17, 29, .84), rgba(21, 17, 29, .66) 50%, transparent);
+  }
+}
 @media (max-width: 560px) {
   body.post-page .article--reading .reading-chapter__frame {
     width: calc(100% - 32px);
