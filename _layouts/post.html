@@ -4,8 +4,8 @@ layout: default
 <article class="article{% if page.article_style == 'reading' %} article--reading{% endif %}">
   <a class="back-link" href="{{ '/archive/' | relative_url }}" onclick="if (window.history.length > 1) { window.history.back(); return false; }"><span class="button-copy"><span class="button-zh">← 返回上一层</span><span class="button-en">BACK TO PREVIOUS PAGE</span></span></a>
   {% if page.cover %}
-  <section class="article-hero" data-article-parallax aria-label="{{ page.title | escape }}">
-    <div class="article-hero__media">
+  <section class="article-hero{% if page.immersive_cover %} article-hero--immersive{% endif %}"{% unless page.immersive_cover %} data-article-parallax{% endunless %} aria-label="{{ page.title | escape }}">
+    <div class="article-hero__media"{% if page.immersive_cover %} style="--immersive-art: url('{{ page.cover | relative_url | escape }}')"{% endif %}>
       <img class="cover article-hero__image" data-parallax-image src="{{ page.cover | relative_url }}" alt="{{ page.title | escape }}">
     </div>
     <div class="article-hero__shade" aria-hidden="true"></div>

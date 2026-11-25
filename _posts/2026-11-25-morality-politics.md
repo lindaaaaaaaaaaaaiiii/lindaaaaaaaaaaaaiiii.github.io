@@ -13,6 +13,7 @@ tags:
 - 性交易政策
 cover: /assets/uploads/morality-politics-megaphone-cover.webp
 article_style: reading
+immersive_cover: true
 policy_scroll: true
 ---
 
