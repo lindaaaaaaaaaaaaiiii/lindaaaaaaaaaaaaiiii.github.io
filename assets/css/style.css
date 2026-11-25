@@ -2113,12 +2113,14 @@ body.post-page .article--reading .reading-chapter--collage .reading-chapter__fra
 }
 body.post-page .article--reading .reading-chapter--collage .reading-chapter__frame::after {
   display: block;
+  z-index: 1;
   height: 48%;
   background: linear-gradient(to bottom, rgba(24, 13, 25, .87), rgba(24, 13, 25, .58) 50%, transparent);
 }
 body.post-page .article--reading .reading-chapter--collage .reading-chapter__title {
   grid-area: 1 / 1;
   justify-self: center;
+  z-index: 2;
   max-width: 28ch;
   margin: 0;
   padding: max(92px, 12vh) clamp(20px, 6vw, 88px) 0;
