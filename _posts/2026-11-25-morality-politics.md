@@ -11,8 +11,9 @@ tags:
 - 道德政治
 - 社会政策
 - 性交易政策
-cover: /assets/uploads/morality-politics-cover.webp
+cover: /assets/uploads/morality-politics-megaphone-cover.webp
 article_style: reading
+policy_scroll: true
 ---
 
 ***在这一系列中，我将探讨道德政治、社会政策以及与常见的“道德评判”所挂钩的社会议题之间的联系。第一篇将首先讨论Wagenaar笔下的“道德政治”为何。***
@@ -82,9 +83,41 @@ Wagenaar为“morality policy”归纳了六项特征。[^10]
 
 这六项特征放在一起，可以帮助我们理解：当某种道德立场占据主导地位，政策制定者还愿不愿意用新的证据来修正对问题的判断？文章开篇的荷兰案例中，政府允许符合条件的性工作场所持牌经营。可场所拿到牌照以后，里面工作的人为什么仍然难以获得劳动保障？要回答这个问题，可以沿着 Wagenaar 与 Altink（2012）的分析，看看政策制定者怎么数人、怎么判断当事人需要什么保护，又怎么知道改革有没有起作用。
 
+<div class="policy-scroll" data-policy-scroll markdown="1">
+
+<div class="policy-scroll__stage" aria-hidden="true" hidden></div>
+
+<div class="policy-scroll__step" markdown="1">
+
+<div class="policy-scroll__scene policy-scroll__scene--counts" aria-hidden="true">
+  <div class="policy-scroll__paper">
+    <div class="policy-scroll__label">某一天</div>
+    <div class="policy-scroll__records"><span>城市甲 <i class="policy-scroll__person"></i></span></div>
+  </div>
+  <div class="policy-scroll__paper">
+    <div class="policy-scroll__label">过去一年</div>
+    <div class="policy-scroll__records"><span>城市甲 <i class="policy-scroll__person"></i></span><span>城市乙 <i class="policy-scroll__person"></i></span></div>
+    <p>同一个人，两地都有记录</p>
+  </div>
+</div>
+
 <strong>一座城市到底有多少人在做性工作？</strong> “某一天有多少人在工作”和“过去一年有多少人曾在这里工作”，是两个不同的问题。一个人如果一年内先后在几座城市工作，就可能出现在几份年度统计里。把这些数字直接相加，同一个人就可能被算上几次。[^21]当一个数字被用来支持某项政策主张时，最值得追问的是它的来历。如果政府要据此安排服务，就得先弄清楚，自己估计的是某一时点的服务需求，还是一年内可能接触到的人数。
 
+</div>
+
+<div class="policy-scroll__step" markdown="1">
+
+<div class="policy-scroll__scene policy-scroll__scene--labels" aria-hidden="true">
+  <div class="policy-scroll__tag">强迫</div>
+  <div class="policy-scroll__paper"><div class="policy-scroll__label">进入行业时</div><p>有哪些谋生选择？</p></div>
+  <div class="policy-scroll__paper"><div class="policy-scroll__label">进入行业后</div><p>谁能支配工作报酬？</p></div>
+</div>
+
 <strong>一个人需要什么保护，要看具体发生了什么。</strong> 有人因为缺少其他收入来源进入性行业，后来又被经营者克扣报酬。前一件事关乎这个人当时有哪些谋生选择，后一件事关乎经营者怎样控制其收入。如果两种处境都用“强迫”来概括，就容易漏掉决定如何介入的细节。Wagenaar 提出，可以用“剥削”来分析工作中的控制[^22]，并具体追问：当事人能拒绝顾客吗？能支配自己的收入吗？遇到克扣时，可以向谁投诉？
+
+</div>
+
+</div>
 
 ### 牌照发下去以后，谁来检查劳动保障有没有落实？ {#policy-outcomes}
 

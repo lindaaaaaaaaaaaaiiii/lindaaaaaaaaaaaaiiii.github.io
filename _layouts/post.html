@@ -28,6 +28,9 @@ layout: default
   {% if page.tags.size > 0 %}<div class="tag-row">{% for tag in page.tags %}<span># {{ tag }}</span>{% endfor %}</div>{% endif %}
   <div class="article-end">— END —</div>
 </article>
+{% if page.policy_scroll %}
+<script src="{{ '/assets/js/policy-scroll.js' | relative_url }}" defer></script>
+{% endif %}
 <script>
 /* Subtle pointer-driven parallax for article cover images. */
 (function () {
